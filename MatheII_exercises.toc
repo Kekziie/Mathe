@@ -1,0 +1,164 @@
+\contentsline {section}{\numberline {1}Blatt 01: K\IeC {\"o}rper/Gruppen, Abbildungen und komplexe Zahlen}{3}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{3}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{4}
+\contentsline {subparagraph}{\nonumberline (a)}{4}
+\contentsline {subparagraph}{\nonumberline (b)}{5}
+\contentsline {subparagraph}{\nonumberline (c)}{5}
+\contentsline {subparagraph}{\nonumberline (d)}{5}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{6}
+\contentsline {section}{\numberline {2}Blatt 02: Abbildungen und Polynome}{7}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{7}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{7}
+\contentsline {subparagraph}{\nonumberline (a)}{7}
+\contentsline {subparagraph}{\nonumberline (b)}{7}
+\contentsline {subparagraph}{\nonumberline (c)}{8}
+\contentsline {subparagraph}{\nonumberline (d)}{8}
+\contentsline {subparagraph}{\nonumberline (e)}{8}
+\contentsline {subparagraph}{\nonumberline (f)}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{10}
+\contentsline {subparagraph}{\nonumberline (a)}{10}
+\contentsline {subparagraph}{\nonumberline (b)}{11}
+\contentsline {subparagraph}{\nonumberline (c)}{11}
+\contentsline {section}{\numberline {3}Blatt 03}{12}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{12}
+\contentsline {subparagraph}{\nonumberline a)}{12}
+\contentsline {subparagraph}{\nonumberline b)}{13}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{13}
+\contentsline {subparagraph}{\nonumberline a)}{13}
+\contentsline {subparagraph}{\nonumberline b)}{14}
+\contentsline {subparagraph}{\nonumberline c)}{14}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{14}
+\contentsline {subparagraph}{\nonumberline a)}{14}
+\contentsline {subparagraph}{\nonumberline b)}{15}
+\contentsline {subparagraph}{\nonumberline c)}{15}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{15}
+\contentsline {paragraph}{\nonumberline Aufgabe 5}{16}
+\contentsline {subparagraph}{\nonumberline a)}{16}
+\contentsline {subparagraph}{\nonumberline b)}{17}
+\contentsline {paragraph}{\nonumberline Aufgabe 6}{18}
+\contentsline {subparagraph}{\nonumberline a)}{18}
+\contentsline {subparagraph}{\nonumberline b)}{18}
+\contentsline {section}{\numberline {4}Blatt 04}{20}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{20}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{20}
+\contentsline {subparagraph}{\nonumberline a)}{20}
+\contentsline {subparagraph}{\nonumberline b)}{21}
+\contentsline {subparagraph}{\nonumberline c)}{21}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{21}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{22}
+\contentsline {subparagraph}{\nonumberline a)}{22}
+\contentsline {subparagraph}{\nonumberline b)}{22}
+\contentsline {subparagraph}{\nonumberline c)}{23}
+\contentsline {subparagraph}{\nonumberline d)}{23}
+\contentsline {subparagraph}{\nonumberline e)}{23}
+\contentsline {subparagraph}{\nonumberline f)}{23}
+\contentsline {subparagraph}{\nonumberline g)}{24}
+\contentsline {subparagraph}{\nonumberline h)}{24}
+\contentsline {paragraph}{\nonumberline Aufgabe 5}{24}
+\contentsline {section}{\numberline {5}Blatt 05}{25}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{25}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{25}
+\contentsline {subparagraph}{\nonumberline a)}{26}
+\contentsline {subparagraph}{\nonumberline b)}{26}
+\contentsline {subparagraph}{\nonumberline c)}{26}
+\contentsline {subparagraph}{\nonumberline d)}{26}
+\contentsline {subparagraph}{\nonumberline e)}{27}
+\contentsline {subparagraph}{\nonumberline f)}{27}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{27}
+\contentsline {subparagraph}{\nonumberline a)}{27}
+\contentsline {subparagraph}{\nonumberline b)}{28}
+\contentsline {subparagraph}{\nonumberline c)}{28}
+\contentsline {section}{\numberline {6}Blatt 06}{30}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{30}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{30}
+\contentsline {subparagraph}{\nonumberline a)}{30}
+\contentsline {subparagraph}{\nonumberline b)}{30}
+\contentsline {subparagraph}{\nonumberline c)}{30}
+\contentsline {subparagraph}{\nonumberline d)}{30}
+\contentsline {subparagraph}{\nonumberline e)}{30}
+\contentsline {subparagraph}{\nonumberline f)}{30}
+\contentsline {subparagraph}{\nonumberline g)}{30}
+\contentsline {subparagraph}{\nonumberline h)}{30}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{30}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{30}
+\contentsline {subparagraph}{\nonumberline a)}{31}
+\contentsline {subparagraph}{\nonumberline b)}{31}
+\contentsline {subparagraph}{\nonumberline c)}{31}
+\contentsline {section}{\numberline {7}Blatt 07}{32}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{32}
+\contentsline {subparagraph}{\nonumberline a)}{32}
+\contentsline {subparagraph}{\nonumberline b)}{32}
+\contentsline {subparagraph}{\nonumberline c)}{32}
+\contentsline {subparagraph}{\nonumberline d)}{32}
+\contentsline {subparagraph}{\nonumberline e)}{32}
+\contentsline {subparagraph}{\nonumberline f)}{32}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{32}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{32}
+\contentsline {subparagraph}{\nonumberline a)}{32}
+\contentsline {subparagraph}{\nonumberline b)}{33}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{33}
+\contentsline {subparagraph}{\nonumberline a)}{33}
+\contentsline {subparagraph}{\nonumberline b)}{33}
+\contentsline {subparagraph}{\nonumberline c)}{33}
+\contentsline {paragraph}{\nonumberline Aufgabe 5}{33}
+\contentsline {section}{\numberline {8}Blatt 08}{34}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{34}
+\contentsline {subparagraph}{\nonumberline a)}{34}
+\contentsline {subparagraph}{\nonumberline b)}{34}
+\contentsline {subparagraph}{\nonumberline c)}{34}
+\contentsline {subparagraph}{\nonumberline d)}{34}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{34}
+\contentsline {subparagraph}{\nonumberline a)}{34}
+\contentsline {subparagraph}{\nonumberline b)}{34}
+\contentsline {subparagraph}{\nonumberline c)}{34}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{34}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{34}
+\contentsline {subparagraph}{\nonumberline a)}{34}
+\contentsline {subparagraph}{\nonumberline b)}{34}
+\contentsline {subparagraph}{\nonumberline c)}{34}
+\contentsline {subparagraph}{\nonumberline d)}{34}
+\contentsline {subparagraph}{\nonumberline e)}{34}
+\contentsline {subparagraph}{\nonumberline f)}{35}
+\contentsline {section}{\numberline {9}Blatt 09}{36}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{36}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{36}
+\contentsline {subparagraph}{\nonumberline a)}{36}
+\contentsline {subparagraph}{\nonumberline b)}{36}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{36}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{36}
+\contentsline {paragraph}{\nonumberline Aufgabe 5}{36}
+\contentsline {section}{\numberline {10}Blatt 10}{37}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{37}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{37}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{37}
+\contentsline {subparagraph}{\nonumberline a)}{37}
+\contentsline {subparagraph}{\nonumberline b)}{37}
+\contentsline {subparagraph}{\nonumberline c)}{37}
+\contentsline {subparagraph}{\nonumberline d)}{37}
+\contentsline {subparagraph}{\nonumberline e)}{37}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{37}
+\contentsline {paragraph}{\nonumberline Aufgabe 5}{37}
+\contentsline {section}{\numberline {11}Blatt 11}{38}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{38}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{38}
+\contentsline {subparagraph}{\nonumberline a)}{38}
+\contentsline {subparagraph}{\nonumberline b)}{38}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{38}
+\contentsline {subparagraph}{\nonumberline a)}{38}
+\contentsline {subparagraph}{\nonumberline b)}{39}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{39}
+\contentsline {section}{\numberline {12}Blatt 12}{40}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{40}
+\contentsline {subparagraph}{\nonumberline a)}{40}
+\contentsline {subparagraph}{\nonumberline b)}{40}
+\contentsline {subparagraph}{\nonumberline c)}{40}
+\contentsline {subparagraph}{\nonumberline d)}{40}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{40}
+\contentsline {subparagraph}{\nonumberline a)}{40}
+\contentsline {subparagraph}{\nonumberline b)}{41}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{41}
+\contentsline {subparagraph}{\nonumberline a)}{41}
+\contentsline {subparagraph}{\nonumberline b)}{41}
+\contentsline {subparagraph}{\nonumberline c)}{41}
+\contentsline {subparagraph}{\nonumberline d)}{41}
