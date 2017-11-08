@@ -1,0 +1,1958 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Kim Thuong Ngo}
+
+
+\usepackage[T1]{fontenc} 
+\usepackage{fourier} 
+
+\usepackage{lipsum} 
+
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+\usepackage{sectsty}
+\allsectionsfont{\centering \normalfont\scshape} 
+
+\usepackage{fancyhdr} 
+\pagestyle{fancyplain} 
+\fancyhead{}
+\fancyfoot[L]{} 
+\fancyfoot[C]{} 
+\fancyfoot[R]{\thepage} 
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+\numberwithin{equation}{section} 
+\numberwithin{figure}{section} 
+\numberwithin{table}{section}
+
+\setlength\parindent{0pt} 
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 
+
+\title{	
+\normalfont \normalsize 
+\textsc{Mathe II} \\ [25pt] 
+\horrule{0.5pt} \\[0.4cm] 
+\huge Aufgaben \\ 
+\horrule{2pt} \\[0.5cm] 
+}
+
+\author{Kim Thuong Ngo} 
+
+\date{\normalsize\today} 
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle 
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+
+\section{Blatt 01: Körper/Gruppen, Abbildungen und komplexe Zahlen}
+
+\paragraph{Aufgabe 1}
+
+Sei (G, *) eine Gruppe. Eine Untergruppe von (G, *) ist eine Teilmenge $U \subseteq G$, die selbst eine Gruppe bezüglich der Verknüpfung * ist. \\
+
+Zeigen Sie, dass $U \subseteq G$ genau dann eine Untergruppe von (G, *) ist, wenn $U \neq \emptyset$ und für alle $a, b \epsilon U$ auch $a * b^{-1} \epsilon U$ gilt, wobei $b^{-1}$ das inverse Element bezüglich * in G ist. \\
+
+Sei (G, *), $U \subseteq G$ Untergruppe \\
+
+Beh: $U \subseteq G$ ist eine Untergruppe von (G, *) $\Longleftrightarrow$ \\
+(i) $U \neq\varnothing$ \\
+(ii) $\forall a,b \epsilon U : a*b^{-1} \epsilon U$, wobei $b^{-1}$ inv. bzgl. * in G \\
+
+Beweis:\\
+"$\Rightarrow$" \\
+Sei $U \subseteq G$ Untergruppe von (G, *) \\
+z.z: $U \neq \emptyset$ \\
+denn: U ist nach Voraussetzung eine Gruppe $\longrightarrow$ $\exists$ ein neutrales Element in U \\
+
+z.z: e=e' , $e' \epsilon U$, $e \epsilon G$ \\
+denn: 
+\begin{flushleft}
+e' = $e*e'$  \\
+= $((e')^{-1}*e')*e'$ \\ 
+= $(e'^{-1})*(e'*e')$ \\
+= $e'^{-1}*e'$ \\  
+= e \\
+\end{flushleft}
+
+z.z: $\tilde{b}=b^{-1} \quad \tilde{b} \epsilon U$ \\
+denn: Sei $b \epsilon U$ beliebig \\
+$\Rightarrow \exists \tilde{b} \epsilon U : b*\tilde{b} = e$ \\
+$\Rightarrow \exists \tilde{b} \epsilon U : b^{-1}*b*\tilde{b} = b^{-1}*e$ \\
+$\Rightarrow \exists \tilde{b} \epsilon U : \tilde{b} = b^{-1}$ \\
+
+d.h. neutrales Element und inverses Element sind gleich in U und G\\
+
+z.z: U abgeschlossen \\
+denn: U Gruppe \\
+damit gilt $\forall a,b \epsilon U: a*b^{-1} \epsilon U$ \\
+
+"$\Leftarrow$" \\
+Sei $U \neq \emptyset$ \\
+$\Rightarrow \exists a \epsilon U: a*a^{-1} = e \epsilon U$ \\
+
+z.z: Existenz inverses Element \\
+denn: Sei $b \epsilon U$ beliebig \\
+$\Rightarrow \exists b^{-1} \epsilon U: e*b^{-1} = b^{-1} \epsilon U$ \\
+
+z.z: Assoziativität von U \\
+denn: * assoziativ auf G\\
+$\Rightarrow$ * assoziativ auf U \\
+
+z.z: U abgeschlossen \\
+denn: Seien $a,b \epsilon U$ beliebig \\
+$\Rightarrow b^{-1} \epsilon U$ \\
+$\Rightarrow a*b = a*(b^{-1})^{-1} \epsilon U$ \\
+
+\hfill $\square$
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Es sei 
+
+\begin{center}
+$GL_{2}(\mathbb{R}) = \Biggl \lbrace
+\begin{pmatrix}
+a & b  \\
+c & d  \\
+\end{pmatrix} 
+: a, b, c, d  \epsilon \: \mathbb{R}, ad - bc \neq 0 \rbrace$ 
+\end{center}
+
+und die binäre Verknüpfung $\circ$ auf $GL_{2}(\mathbb{R})$ sei definiert durch
+
+\begin{center}
+$\begin{pmatrix}
+a & b  \\
+c & d  \\
+\end{pmatrix} 
+\circ
+\begin{pmatrix}
+e & f  \\
+g & h  \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+ae+bg & af+bh  \\
+ce+dg & cf+dh  \\
+\end{pmatrix}.$
+\end{center}
+
+\subparagraph{(a)} 
+Zeigen Sie, dass $\circ$ tatsächlich eine binäre Verknüpfung auf $GL_{2}(\mathbb{R})$ darstellt, d.h. dass $A \circ B \epsilon GL_{2}(\mathbb{R})$ gilt.\\
+
+$A \circ B \epsilon GL_{2}(\mathbb{R})$ soll für $A, B \epsilon GL_{2}(\mathbb{R})$ gelten \\
+Beweise, dass $(ae+bg)(cf+dh)-(af+bh)(ce+dg) \neq 0$ 
+
+\begin{flushleft}
+(ae+bg)(cf+dh)-(af+bh)(ce+dg) \\
+= (aecf+bgcf+aedh+bgdh)-(aecf+afdg+bhce+bgdh) \\
+= bgcf+aedh-afdg-bhce \\
+= bc(gf-he)+ad(eh-gf) \\
+= -bc(eh-gf)+ad(eh-gf) \\
+= (ad-bc)(eh-gf) \\
+\end{flushleft}
+
+Da $A, B \epsilon GL_{2}(\mathbb{R})$ gilt, heißt es, dass $ad-bc \neq 0$ und $eh-gf \neq 0$ sind, d.h. das $(ad-bc)(eh-gf)$ ebenfalls ungleich 0 ist. Somit ist bewiesen, das $A \circ B \epsilon GL_{2}(\mathbb{R})$ für $A, B \epsilon GL_{2}(\mathbb{R})$ gilt.
+
+%-----------------------------
+
+\subparagraph{(b)} 
+Zeigen Sie, dass die Operation $\circ$ nicht kommutativ ist. \\
+
+Gegenbeispiel: \\
+
+\begin{center}
+$\begin{pmatrix}
+1 & 0  \\
+1 & 1  \\
+\end{pmatrix} 
+\circ
+\begin{pmatrix}
+1 & 1  \\
+0 & 1  \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 \\
+1 & 2 \\
+\end{pmatrix} 
+\neq
+\begin{pmatrix}
+1 & 1  \\
+0 & 1  \\
+\end{pmatrix} 
+\circ
+\begin{pmatrix}
+1 & 0  \\
+1 & 1  \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 1 \\
+1 & 1 \\
+\end{pmatrix}$
+\end{center}
+
+%-----------------------------
+
+\subparagraph{(c)} 
+Zeigen Sie, dass $(GL_{2}(\mathbb{R}), \circ)$ eine Gruppe ist. Geben Sie das neutrale Element an. Wie sieht das inverse Element zu
+
+\begin{center}
+$\begin{pmatrix}
+a & b  \\
+c & d  \\
+\end{pmatrix} $
+\end{center}
+
+aus? \\
+
+z.z: $(GL_{2}(\mathbb{R}), \circ)$ ist Gruppe \\
+Beweis: \\
+Abgeschlossenheit gezeigt in Teilaufgabe a) \\
+
+Assoziativität: \\
+z.z: $(A \circ B) \circ C = A \circ (B \circ C)$ \\
+Beweis: Sei $C=
+\begin{pmatrix}
+i & j  \\
+k & l  \\
+\end{pmatrix} $ \\
+$(A \circ B) \circ C =
+\begin{pmatrix}
+ae+bg & af+bh  \\
+ce+dg & cf+dh  \\
+\end{pmatrix} 
+\circ
+\begin{pmatrix}
+i & j  \\
+k & l  \\
+\end{pmatrix} $ \\
+
+ausmultiplizieren und ausklammern \\
+
+= $A \circ (B \circ C)$
+
+%-----------------------------
+
+\subparagraph{(d)} 
+Zeigen Sie, dass 
+
+\begin{center}
+$SL_{2}(\mathbb{R})= \Biggl \lbrace
+\begin{pmatrix}
+a & b  \\
+c & d  \\
+\end{pmatrix} 
+: a, b, c, d  \epsilon \: \mathbb{R}, ad - bc = 1 \rbrace$ 
+\end{center}
+
+eine Untergruppe (vgl. mit Aufgabe 1) von $(GL_{2}(\mathbb{R}), \circ)$ ist. Ist diese Untergruppe kommutativ? \\
+
+z.z: $(SL_{2}(\mathbb{R}) \neq 0)$ \\
+denn: $
+\begin{pmatrix}
+1 & 0  \\
+0 & 1  \\
+\end{pmatrix} 
+\epsilon SL_{2}(\mathbb{R})$ \\
+
+z.z: Aufgabe 1(ii)\\
+denn: $
+\begin{pmatrix}
+a & b  \\
+c & d  \\
+\end{pmatrix} ,
+\begin{pmatrix}
+e & f  \\
+g & h  \\
+\end{pmatrix} 
+\epsilon SL_{2}(\mathbb{R})$ \\
+
+$
+\begin{pmatrix}
+a & b  \\
+c & d  \\
+\end{pmatrix} 
+\circ
+\begin{pmatrix}
+e & f  \\
+g & h  \\
+\end{pmatrix}^{-1} $ \\
+
+$ =
+\begin{pmatrix}
+a & b  \\
+c & d  \\
+\end{pmatrix} 
+\circ
+\dfrac{1}{eh-gf}
+\begin{pmatrix}
+h & -f  \\
+-g & e  \\
+\end{pmatrix} $ \\
+
+$ =
+\begin{pmatrix}
+ah-bg & -af+be  \\
+ah-gd & -cf+de \\
+\end{pmatrix} 
+\epsilon SL_{2}(\mathbb{R})$
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Sei $a=2-i$ und $b=1+2i$. Berechnen Sie
+
+\begin{center}
+$z_{1}=a+b$, $\: z_{2}=a-b$,  $\: z_{3}=a*b$,  $\: z_{4}= \dfrac{1}{a}$,  $\: z_{5}= \dfrac{a}{b}$,  $\: z_{6}=a^{2}$,  $\: z_{7}=|b|$,  $\: z_{8}=a*$,  $\: z_{9}= \varphi (b)$,
+\end{center}
+
+wobei $\varphi(b) \epsilon \[0,2 \pi \[$ mit $b = |b| * (cos \varphi (b) + i*sin \varphi (b))$. Die Angabe von $z_{9}$ kann näherungsweise erfolgen. Stellen Sie a, b sowie $z_{1}, ..., z_{9}$ in der komplexen Zahlenebene dar. \\
+
+$z_{1}=a+b$\\
+$=(2-i)+(1+2i)=3+i$\\
+
+$z_{2}=a-b$\\
+$=(2-i)-(1+2i)=(2-i)-1-2i=1-3i$\\
+
+$z_{3}=a*b$\\
+$=(2-i)*(1+2i)=2-i+4i-2i^{2}=2+3i+2=4+3i$\\
+
+$z_{4}=\dfrac{1}{a}$\\
+$=\dfrac{1}{(2-i)}=\dfrac{(2+i)}{(2-i)(2+i)}=\dfrac{2+i}{(\sqrt{2^{2}+1^{2}})^{2}}=\dfrac{2+i}{(\sqrt{5})^{2}}=\dfrac{2}{5}+\dfrac{i}{5}$\\
+
+$z_{5}=\dfrac{a}{b}$\\
+$=\dfrac{(2-i)}{(1+2i)}=\dfrac{(2-i)(1-2i)}{(1+2i)(1-2i)}=\dfrac{2-i-4i+2i^{2}}{(\sqrt{1^{2}+2^{2}})^{2}}=\dfrac{-5i}{5}=-i$\\
+
+$z_{6}=a^{2}$\\
+$=(2-i)^{2}=4-4i+i^{2}=4-4i-1=3-4i$\\
+
+$z_{7}=|b|$\\
+$=|(1+2i)|=\sqrt{1^{2}+2^{2}}=\sqrt{5}$\\
+
+$z_{8}=a*$\\
+$=2-i$\\
+
+$z_{9}=\varphi (b)$\\
+$=\varphi(1+2i)=atan(\dfrac{2}{1})=atan(2)= \dfrac{7}{20} \pi$\\
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 02: Abbildungen und Polynome}
+
+\paragraph{Aufgabe 1}
+
+Seien $f:\mathbb{R} \rightarrow \mathbb{R}$ und $g:\mathbb{R} \rightarrow \mathbb{R}$ und betrachte die Funktionen $h_{i}:\mathbb{R} \rightarrow \mathbb{R}$, i=1,2,3 mit
+
+\begin{center}
+$h_{1}(x)=(f+g)(x)$, $\: h_{2}(x)=(f*g)(x)$, $\: h_{3}(x)=(g \circ f)(x)$.
+\end{center}
+
+Welche dieser Funktionen ist notwendigerweise injektiv/ surjektiv/ bijektiv/ achsensymmetrisch zur y-Achse/ punktsymmetrisch zu (0,0)/ monoton wachsend, wenn sowohl f als auch g diese Eigenschaft haben? Beweisen Sie Ihre Antworten. \\
+
+\begin{tabular}{|c|c|}
+\hline
+& Formel \\
+\hline
+injektiv & $h(x_{1})=h(x_{2}) \Rightarrow x_{1}=x_{2}$\\
+\hline
+surjektiv & $\forall y \epsilon \mathbb{R} \exists x \epsilon \mathbb{R}: h(x)=y$\\
+\hline
+bijektiv & injektiv und surjektiv\\
+\hline
+Achsensymmetrie zur y-Achse & $h(-x)=h(x)$\\
+\hline
+Punktsymmetrie zum Ursprung & $-h(-x)=h(x)$\\
+\hline
+monoton wachsend & $x_{1} \leq x_{2} \Rightarrow h(x_{1}) \leq h(x_{2})$ \\
+\hline
+\end{tabular} 
+\\
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+& $h_{1}(x)=(f+g)(x)$ & $h_{2}(x)=(f*g)(x)$ & $h_{3}(x)=(g \circ f)(x)$\\
+\hline
+injektiv & nicht injektiv & nicht injektiv & injektiv \\
+\hline
+surjektiv & nicht surjektiv & nicht surjektiv & surjektiv\\
+\hline
+bijektiv & nicht bijektiv & nicht bijektiv & bijektiv \\
+\hline
+Achsensymmetrie zur y-Achse & ja & ja & ja \\
+\hline
+Punktsymmetrie zum Ursprung & ja & ja & ja \\
+\hline
+monoton wachsend & ja & ja & ja \\
+\hline
+\end{tabular}
+
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Sind die folgenden Abbildungen injektiv und/ oder surjektiv? Geben Sie, wenn f bijektiv ist, die Umkehrabbildung $f^{-1}$ an. Begründen Sie ihre Antworten.
+
+\subparagraph{(a)}
+$f: \mathbb{N} \rightarrow \mathbb{N}$ mit $f(n)=n+1$ \\
+
+injektiv: \\
+Seien $n_{1}, n_{2} \epsilon \mathbb{N}$ mit $f(n_{1})=f(n_{2})$ \\
+$\Rightarrow n_{1}+1=n_{2}+1$ \\
+$\Rightarrow n_{1}=n_{2}$ \\
+
+nicht surjektiv: \\
+$\nexists n \epsilon \mathbb{N}: f(n)= 1$ \\
+
+nicht bijektiv
+
+%-----------------------------
+
+\subparagraph{(b)}
+$f: \mathbb{Z} \rightarrow \mathbb{N}_{0}$ mit $f(k)=|k|$ \\
+
+nicht injektiv: \\
+Gegenbeispiel: \\
+$n_{1}=2$, $n_{1}=-2$\\
+$n_{1} \neq n_{2} \Rightarrow f(n_{1}) \neq f(n_{2})$ \\
+$f(n_{1})=2$, $f(n_{1})=2$\\
+
+surjektiv: \\
+Sei $f(k)=l$ \\
+$\forall l \epsilon \mathbb{N}_{0} \exists k \epsilon \mathbb{Z}:f(k)=|k|=l$ \\
+
+nicht bijektiv
+
+%-----------------------------
+
+\subparagraph{(c)}
+$f: \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{Z}$ mit $f(n_{1}, n_{2})=n_{1}-n_{2}$ \\
+
+nicht injektiv: \\
+Gegenbeispiel: \\
+$(4,3) \neq (3,2)$ \\
+$f(4,3) = f(3,2) = 1$ \\
+
+surjektiv: \\
+Sei $f(n_{1}, n_{2})=z$ \\
+$\forall z \epsilon \mathbb{Z} \exists (n_{1}, n_{2}) n_{1}, n_{2} \epsilon \mathbb{N}:f(n_{1}, n_{2})= n_{1}, n_{2}=z$ \\
+
+nicht bijektiv
+
+%-----------------------------
+
+\subparagraph{(d)}
+$f: \mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)=\sqrt[3]{x}$ \\
+
+injektiv: \\
+$\forall x_{1}, x_{2} \epsilon \mathbb{R}: x_{1} \neq x_{2} \Rightarrow f(x_{1}) < f(x_{2})$ \\
+da $\sqrt[3]{}$ streng monoton wachsend $\Rightarrow$ f injektiv \\
+
+surjektiv: \\
+$\forall y \epsilon \mathbb{R} \exists x \epsilon \mathbb{R}: f(x)=y$ \\
+
+bijektiv \\
+Umkehrfunktion: \\
+$f^{-1}:\mathbb{R} \rightarrow \mathbb{R}, f(y)=y^3$
+
+%-----------------------------
+
+\subparagraph{(e)}
+$f: \mathbb{R} \rightarrow [0,1]$ mit $f(x)=x-\lfloor x \rfloor$, wobei die sogenannte Gauß-Klammer $\lfloor x \rfloor$ von x die größte ganze Zahl kleiner gleich x liefert \\
+
+nicht injektiv: \\
+Gegenbeispiel: \\
+$2,3 \neq 3,3$\\
+$f(2,3) = f(3,3) = 0,3$ \\
+
+nicht surjektiv: \\
+$\nexists x: f(x)=1$ \\
+
+nicht bijektiv
+
+%-----------------------------
+
+\subparagraph{(f)}
+$f: \mathbb{Z} \times \mathbb{N} \rightarrow \mathbb{Q}$ mit $f(k,n)=\dfrac{k}{n}$ \\
+
+nicht injektiv: \\
+Gegenbeispiel: \\
+$(1,3) \neq (2,6)$ \\
+$f(1,3) = f(2,6) = \dfrac{1}{3}$
+
+surjektiv: \\
+nach Definition: $\forall q \epsilon \mathbb{Q}:q=\dfrac{a}{b}$ \\
+$a \epsilon \mathbb{Z}$, $b \epsilon \mathbb{Z}$ \\
+Fall 1: $b < 0$\\
+()
+Fall 2: $b > 0$\\
+
+nicht bijektiv
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Zeigen Sie, dass die Summe $S(x)=A(x)+B(x)$ und das Produkt $P(x)=A(x)*B(x)$ zweier Polynome A(x) und B(x) wieder Polynome sind und dass
+
+\begin{center}
+$Grad(S(x)) \leq max\{Grad(A(x)), Grad(B(x)) \}$ \\
+$Grad(P(s)) = Grad(A(x)) + Grad(B(x))$ \\
+\end{center}
+
+Beh: \\
+Zeige $S(x) = A(x)+B(x)$ und $P(x)= A(x)*B(x)$ sind Polynome und \\
+1.) $Grad(S(x)) \leq max\{Grad(A(x)), Grad(B(x)) \}$ \\
+2.) $Grad(P(s)) = Grad(A(x)) + Grad(B(x))$ \\
+
+Beweis: \\
+
+Fall 1: (ohne Einschränkung) \\
+B(x) = Nullpolynom \\
+$\Rightarrow S(x) = A(x) \bigwedge P(x) = 0$ \\
+$\Rightarrow Beh.$ \\
+
+Fall 2: Definiere $A(x):= \sum^{m}_{i=0} a_{i}x^{i} \bigwedge B(x):= \sum^{n}_{j=0} b_{j}x^{j}$ mit $Grad(A)=m$, $Grad(B)=n$ und $m,n \epsilon \mathbb{N}$ \\
+
+Wissen: $a_{m} \neq 0 \bigwedge b_{n} \neq 0$ \\
+
+Sei ohne Einschränkung $m \geq n$ \\
+
+$S(x)=A(x)+B(x)$\\
+$= \sum^{m}_{i=0} a_{i}x^{i} + \sum^{n}_{j=0} b_{j}x^{j}$ \\
+$= \sum^{n}_{i=0} (a_{i}+b_{i})x^{i}+ \sum^{m}_{i=n+1} a_{i}x^{i} $ \\
+
+$P(x)= A(x)*B(x)$ \\
+$= (\sum^{m}_{i=0} a_{i}x^{i}) (\sum^{n}_{j=0} b_{j}x^{j}$) \\
+$= \sum^{m}_{i=0} \sum^{n}_{j=0} a_{i}b_{j}x^{i+j}$ \\
+$= \sum^{m+n}_{k=0}(\sum_{i+j=k} a_{i}b_{j})x^{k}$ \\
+es gilt $0 \leq i \leq m$ und $0 \leq j \leq n$ \\
+da $\sum _{i+j=m+n} = a_{m}b_{n} \neq 0$ \\
+$\Rightarrow 2.)$ \\
+
+\hfill $\square$
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Es gilt folgendes Lemma (ohne Beweis): \\
+Seien A(x) und B(x) Polynome, wobei B(x) ungleich dem Nullpolynom ist. Dann gibt es eindeutig bestimmte Polynome Q(x) und R(x) mit
+
+\begin{center}
+$A(x)=Q(x)*B(x)+R(x)$ und $Grad(R(x)) < Grad(B(x))$. \\
+\end{center}
+
+\textit{Anmerkung: Der Grad des Nullpolynoms ist $-\infty$ . Sie dürfen Aufgabe 3 verwenden, auch wenn Sie diese nicht gelöst haben.} \\
+
+Zeigen Sie, dass...
+
+\subparagraph{(a)}
+... $a \epsilon \mathbb{R}$ genau dann Nullstelle eines Polynoms A(x) ist, wenn $A(x)=(x-a)$. B(x) für ein Polynom B(x) gilt. \\
+
+Beh: \\
+$a \epsilon \mathbb{R}$ Nullstelle von A(x) $\Leftrightarrow A(x) =(x-a)* B(x)$ \\
+
+Beweis: \\
+"$\Rightarrow$" \\
+Sei $A(x)=(x-a) *B(x)$ \\
+$\overrightarrow{x=a} A(a)=(a-a)*B(a)=0$\\
+
+"$\Leftarrow$" \\
+Sei a Nullstelle von A(x) \\
+$\overrightarrow{Lemma} A(x)=(x-a)Q(x)+R(x) \bigwedge Grad(R(x))<1$ \\
+Fall 1: R(x) Nullpolynom $\rightsquigarrow A(x)=(x-a)Q(x)$ \\
+Fall 2: $R(x)=c(+0)$, da $A(a)=(a-a)Q(a)+c$  (Widerspruch) \\
+
+%-----------------------------
+
+\subparagraph{(b)}
+... ein Polynom vom Grad n (mit $n \epsilon \mathbb{N}_{0}$) höchstens n verschiedene Nullstellen besitzt. \\
+
+Beh: \\
+Polynom P (Grad(P) = $n \epsilon \mathbb{N}_{0}$ hat max. n verschiedene Nullstellen \\
+
+Beweis: Induktion über $n \epsilon \mathbb{N}_{0}$ \\
+
+Induktionsanfang: n=0 \\
+Sei A(x) Polynom mit Grad(A(x))=n \\
+$c \neq 0 \Rightarrow A(x)=c$ und A(x) hat keine Nullstelle \\
+
+Induktionsschritt: $n \rightarrow n+1$ \\ 
+A(x) Polynom mit Grad(A(x))=n+1 und n+2 Nullstellen \\
+Sei $a \epsilon \mathbb{R}$ eine der n+2 Nullstellen \\
+$\Rightarrow A(x)=(x-a)*B(x)$, B Polynom \\
+$\Rightarrow Grad(B(x))' = u$ \\
+A(x) hat n+1 verschieden Nullstellen ungleich a sind, da (x-a)=0 \\
+$\Leftrightarrow x=a$ müssen diese Nullstellen auch Nullstellen von B(x) sein (Widerspruch) \\
+
+%-----------------------------
+
+\subparagraph{(c)}
+... zwei Polynome vom Grad $n_{1} \leq n$ bzw. $n_{2} \leq n$ (mit $n \epsilon \mathbb{N}_{0}$), die an (n+1) verschiedenen Stellen den gleichen Wert annehmen, übereinstimmen. \\
+
+Beweis: \\
+A,B Polynome \\
+$A = A(x)$, $B = B(x)$ $\Rightarrow A-B$ Polynome \\
+$Grad(A-B) \leqslant n$ \\
+$\Rightarrow A-B$ hat n+1 Nullstellen \\
+$\Rightarrow A-B = 0$ \\
+$\Rightarrow A = B$ \\
+
+\hfill $\square$
+
+%-----------------------------
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 03}
+
+\paragraph{Aufgabe 1}
+
+Bestimmen Sie für die folgenden Zuordnungsvorschriften den maximalen Definitionsbereich $D \subseteq /mathbb{R}$ /den größtmöglichen Bereich $D \subseteq /mathbb{R}$, sodass für ein $x \epsilon D$ die Zuordnungsvorschrift sinnvoll ist) und den zugehörigen Bildbereich $f(D)= \{f(x):x \epsilon D \}$. Sind die entstandenen Funktionen $f:D \rightarrow f(D)$ injektiv, surjektiv, bijektiv? Bestimmen Sie falls möglich ihre Umkehrfunktionen. Geben Sie auch den Definitionsbereich und Bildbereich der Umkehrfunktion an.
+
+\subparagraph{a)}
+$f(x)=\dfrac{x+1}{x-1}$ \\
+
+$f: \mathbb{R} \textbackslash \{ 1 \} \rightarrow \mathbb{R} \textbackslash \{ 1 \}$
+
+
+z.z. Injektivität \\
+$x_{1}, x_{2} \epsilon \mathbb{R} \textbackslash \{ 1 \} : f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2}$ \\
+
+Beweis: \\
+$f(x_{1}) = f(x_{2})$ \\
+
+$\dfrac{x_{1}+1}{x_{1}-1} = \dfrac{x_{2}+1}{x_{2}-1}$ \\
+$\Leftrightarrow (x_{1}+1)(x_{2}-1) = (x_{2}+1)(x_{1}-1)$ \\
+$\Leftrightarrow x_{1}x_{2}-x_{1}+x_{2}-1 = x_{2}x_{1}-x_{2}+x_{1}-1$ \\
+$\Leftrightarrow x_{1}x_{2}-x_{1}+x_{2}-1 - (x_{2}x_{1}-x_{2}+x_{1}-1) = 0$ \\
+$\Leftrightarrow 2x_{2}-2x_{1}=0$ \\
+$\Leftrightarrow 2x_{2} = 2x_{1}$ \\
+$\Leftrightarrow x_{2} = x_{1}$ \\
+
+
+z.z. Surjektivität \\
+Sei $f(x)=y$, dann gilt $\forall y \epsilon Y \exists x \epsilon X: f(x)=y$ \\
+
+Beweis: \\
+$y=\dfrac{x+1}{x-1}$ \\
+$\Leftrightarrow y * (x-1)= x+1$ \\
+$\Leftrightarrow yx-y = x+1$ \\
+$\Leftrightarrow -y = x+1-yx$ \\
+$\Leftrightarrow -y -1 = x-yx$ \\
+$\Leftrightarrow -y -1= x(1-y)$ \\
+$\Leftrightarrow \dfrac{-y-1}{1-y}=x$\\
+
+z.z. Bijektivität\\
+Funktion f ist injektiv und surjektiv, d.h. auch bijektiv und es existiert eine Umkehrfunktion. \\
+
+Umkehrfunktion: \\
+$f^{-1}(x)= \dfrac{x+1}{x-1}$
+$f^{-1}:\mathbb{R} \textbackslash \{ 1 \} \rightarrow \mathbb{R} \textbackslash \{ 1 \}$ \\
+
+\subparagraph{b)} 
+$f(x)=ln(ln(x))$ \\
+
+$f:]1, \infty[ \rightarrow \mathbb{R}$ \\
+
+
+z.z. Injektivität \\
+$x_{1}, x_{2} \epsilon \mathbb{R} \textbackslash \{ 1 \} : f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2}$ \\
+
+Beweis: \\
+$f(x_{1}) = f(x_{2})$ \\
+
+$ln(ln(x_{1})) = ln(ln(x_{2}))$ \\
+$\Leftrightarrow ln(x_{1}) = ln(x_{2})$ \\
+$\Leftrightarrow x_{1} = x_{2}$ \\
+
+
+z.z. Surjektivität \\
+Sei $f(x)=y$, dann gilt $\forall y \epsilon Y \exists x \epsilon X: f(x)=y$ \\
+
+Beweis: \\
+$ln(ln(x))=y$ \\
+$\Leftrightarrow ln(x)= e^{y}$ \\
+$\Leftrightarrow x= e^{e^{y}}$ \\
+
+
+z.z.Bijektivität
+Funktion f ist injektiv und surjektiv, d.h. auch bijektiv und es existiert eine Umkehrfunktion. \\
+
+Umkehrfunktion: \\
+$f^{-1}(x)= e^{e^{x}}$
+$f^{-1}:\mathbb{R} \rightarrow ]1, \infty[$ \\
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Es gelte $a,b,x > 0$ mit $x > a$. Vereinfachen Sie die folgenden Ausdrücke:
+
+\subparagraph{a)}
+$\dfrac{1}{2} ln \Bigg( \dfrac{x}{a} + \sqrt{\dfrac{x^{2}}{a^{2}} -1} \Bigg) 
+- \dfrac{1}{2} ln \Bigg(\dfrac{1}{x- \sqrt{x^{2}-a^{2}}} \Bigg) 
++ ln(\sqrt{a})$\\
+$= \dfrac{1}{2} ln \Bigg( \dfrac{\dfrac{x}{1}+ \sqrt{\dfrac{x^{2}}{a^{2}}-1}}{\dfrac{1}{x \sqrt{x^{2}-a^{2}}}} \Bigg)+ \dfrac{1}{2} ln(a)$ \\
+$= \dfrac{1}{2} ln \Bigg( \Bigg( \dfrac{x}{a} + \sqrt{\dfrac{x^{2}}{a^{2}} -1} \Bigg) * \Bigg( x-\sqrt{x^{2}-a^{2}} \Bigg) \Bigg) + \dfrac{1}{2} ln(a)$ \\
+$= \dfrac{1}{2} ln \Bigg( \dfrac{1}{a} (x+ \sqrt{x^{2}-a^{2}}) * (x- \sqrt{x^{2}-a^{2}}) \Bigg) + \dfrac{1}{2} ln(a)$\\
+$= \dfrac{1}{2} ln \Bigg( \dfrac{1}{a} (x^{2}-(\sqrt{x^{2-a^{2}}})^{2}) \Bigg) + \dfrac{1}{2} ln(a)$ \\
+$= \dfrac{1}{2} ln \Bigg(\dfrac{1}{a} (x^{2}-x^{2}+a^{2}) \Bigg) + \dfrac{1}{2} ln(a)$ \\
+$= \dfrac{1}{2} ln \Bigg( \dfrac{a^{2}}{a} \Bigg) + \dfrac{1}{2} ln(a)$ \\
+$= \dfrac{1}{2} ln(a) + \dfrac{1}{2} ln(a)$ \\
+$= ln(a)$ \\
+
+\subparagraph{b)}
+$e^{log_{2}(b)log_{b}(512^{ln(2)})} * e^{ln((-1)^{14})}$\\
+$= e^{log_{2}(b)*log_{b}(512^{ln(2)})} * (-1)^{14}$ \\
+$= e^{\dfrac{ln(b)}{ln(2)} * ln(2) * \dfrac{ln(512)}{ln(b)}} * 1$ \\
+$= e^{ln(512)}$ \\
+$= 512$ \\
+
+\subparagraph{c)}
+$log_{b} \Bigg(a^{\dfrac{log_{2}(e^{x})}{log_{b}(a)}} \Bigg)-xlog_{2}(e)$ \\
+$= \dfrac{log_{2}(e^{x})}{log_{b}(a)} * log_{b}(a) - x log_{2}(e)$ \\
+$= \dfrac{\dfrac{ln(e^{x})}{ln(2)}}{\dfrac{ln(a)}{ln(b)}} * \dfrac{ln(a)}{ln(b)} - log_{2}(e^{x})$ \\
+$= \dfrac{ln(e^{x})}{ln(2)}- \dfrac{ln(e^{x})}{ln(2)}$ \\
+$= 0$ \\
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Lösen Sie folgende Gleichungen für $x \epsilon /mathbb{R}$:
+
+\subparagraph{a)}
+$log_{4}(x+2)-log_{4}(x-2)=\dfrac{1}{2}$ \\
+$\Leftrightarrow log_{4} \Bigg( \dfrac{x+2}{x-2} \Bigg) = \dfrac{1}{2}$ \\
+$\Leftrightarrow \dfrac{ln \Bigg( \dfrac{x+2}{x-2} \Bigg)}{ln(4)} = \dfrac{1}{2}$ \\
+$\Leftrightarrow ln \Bigg( \dfrac{x+2}{x-2} \Bigg) = \dfrac{1}{2} ln(4)$ \\
+$\Leftrightarrow e^{ln \Bigg( \dfrac{x+2}{x-2} \Bigg)} = \dfrac{1}{2} e^{ln(4)}$ \\
+$\Leftrightarrow \dfrac{x+2}{x-2} = \dfrac{4}{2}$ \\
+$\Leftrightarrow x+2 = 2(x-2)$ \\
+$\Leftrightarrow x+2 = 2x-4$ \\
+$\Leftrightarrow x-2x = -4-2$ \\
+$\Leftrightarrow -x = -6$ \\
+$\Leftrightarrow x = 6$ \\
+
+\subparagraph{b)}
+$2^{3-x}*3^{x-1}=6^{2x-3}$ \\
+$\Leftrightarrow 2^{3-x}*3^{x-1}=(2*3)^{2x-3}$ \\
+$\Leftrightarrow log(2^{3-x}*3^{x-1})=log((2*3)^{2x-3})$ \\
+$\Leftrightarrow log(2^{3-x}) + log(3^{x-1})=log(2^{2x-3}) + log(3^{2x-3})$ \\
+$\Leftrightarrow (3-x)log(2)+(x-1)log(3)=(2x-3)(log(2)+log(3))$ \\
+$\Leftrightarrow (3-x)log(2)-(2x-3)log(2) = (2x-3)log(3)-(x-1)log(3)$ \\
+$\Leftrightarrow (3-x-2x+3)log(2) = (2x-3-x+1)log(3)$ \\
+$\Leftrightarrow (-3x+6)log(2) = (x-2)log(3)$ \\
+$\Leftrightarrow (-3x+6)log(2) - (x-2)log(3) =0$\\
+$\Leftrightarrow (-3)(x-2)log(2) - (x-2)log(3) =0$ \\
+$\Leftrightarrow (x-2)(-3log(2)-log(3))=0$ \\
+$\Leftrightarrow x = 2$, weil $x-2=0$
+
+\subparagraph{c)}
+$4^{x}+4=2^{x+2}+2^{x}$\\
+$\Leftrightarrow 2^{x}*2^{2} + 2^{2} = 2^{x+1}+2^{x}$ \\
+$\Leftrightarrow 2^{x+2}+2^{2}=2^{x+2}+2^{x}$ \\
+$\Leftrightarrow 2^{2}=2^{x}$ \\
+$\Leftrightarrow x = 2$ und $x = 0$ \\
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Ein radioaktives Präparat zerfällt nach einem exponentiellen Zerfallsgesetz
+
+\begin{center}
+$y(t)=y(0)*a^{t}$, $t \geq =$,
+\end{center}
+
+wobei t die Zeitdauer in Tagen seit Beginn des Zerfallsprozesses misst und y(t) die zum Zeitpunkt t vorhandene Substanz in mg bezeichnet. Wie lange dauert es, bis noch 1 mg der ursprünglichen Substanz vorhanden ist, wenn die vorhandene Substanz nach jeweils 7 Tagen auf ein Fünftel zurückgeht und zu Beginn des Zerfallsprozesses 15 mg der Substanz vorhanden sind? \\
+
+$t$: Zeitdauer in Tagen \\
+$y(t)$: Subtanz in mg zum Zeitpunkt t\\
+$y(0) = 15$mg \\
+nach jeweils 7 Tagen: Substanz auf ein Fünftel \\
+
+\begin{tabular}{c|c}
+t & y(t) in mg \\
+\hline
+0 & 15 \\
+\hline
+7 & 3 \\
+\hline
+14 & 0,6 \\
+\end{tabular} \\
+
+$y(7)=15*a^{7}=3$ \\
+$\Leftrightarrow a^{7} = \dfrac{3}{15}$ \\
+$\Leftrightarrow a = \sqrt[7]{ \dfrac{3}{15}}$ \\
+
+Formel: $y(t)=15*(\sqrt[7]{\dfrac{3}{15}})^{t}$\\
+
+$y(t)=1$\\
+$\Leftrightarrow 15*(\sqrt[7]{\dfrac{3}{15}})^{t} =1$ \\
+$\Leftrightarrow (\sqrt[7]{\dfrac{3}{15}})^{t} = \dfrac{1}{15}$ \\
+$\Leftrightarrow t*log \Bigg( (\sqrt[7]{\dfrac{3}{15}}) \Bigg)
+=log(1)-log(15)=-log(15)$\\
+$\Leftrightarrow t = \dfrac{-log(15)}{\dfrac{1}{7} log \Bigg( \dfrac{3}{15} \Bigg)}$ \\
+$\Leftrightarrow t \approx 11,778$ \\
+
+Es dauert ungefähr 11,8 Tage bis 1 mg der Substanz vorhanden ist. \\
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 5}
+
+\subparagraph{a)}
+Beweisen Sie folgende Ungleichungen:
+
+Für $n \epsilon \mathbb{N}$ und $a \epsilon \mathbb{R}$ mit $a \geq -1$ gilt
+
+\begin{center}
+$(1+a)^{n} \geq 1+na$.
+\end{center}
+
+Induktionsanfang: $n=1$ \\
+$(1+a)^{1}=1+a \geq 1+a = 1+1a$ \\
+
+Induktionsschritt: $n \rightarrow n+1$ \\
+
+Induktionsvoraussetzung: $(1+a)^{n} \geq 1+na$ \\
+Induktionsbehauptung: $(1+a)^{n+1} \geq 1+(n+1)a$ \\
+
+Beweis: \\
+$(1+a)^{n+1}$ \\
+$= (1+a)^{n}*(1+a)^{1}$ \\
+$= (1+a)^{n}* (1+a)$ \\
+$\geq ^{I.V.} (1+na)*(1+a)$ \\
+$\geq 1+na+a+na^{2}$ \\
+$\geq 1+(n+1)a$ \\
+
+$\hfill \square$
+
+\subparagraph{b)}
+Zeigen Sie, dass $f:\mathbb{N} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(n)=(1+ \dfrac{1}{n})^{n}$
+\end{center}
+
+streng monoton wachsend ist, d.h. es gilt $f(n+1) > f(n)$ für alle $n \epsilon \mathbb{N}$.
+
+Hinweis: Zeigen Sie
+
+\begin{center}
+$f(n+1) > f(n) \Leftrightarrow \Bigg(1- \dfrac{1}{(n+1)^{2}} \Bigg)^{n} > 1- \dfrac{1}{n+2}$
+\end{center}
+
+und verwenden Sie die Ungleichungen aus A).
+
+z.z. $f(n+1) > f(n) \Rightarrow \Bigg(1- \dfrac{1}{(n+1)^{2}} \Bigg)^{n} > 1- \dfrac{1}{n+2}$ \\
+
+Beweis: \\
+$f(n+1) > f(n)$ \\
+$\Leftrightarrow \Bigg(1+\dfrac{1}{n+1} \Bigg)^{n+1} 
+                 > \Bigg(1+\dfrac{1}{n} \Bigg)^{n}$\\
+$\Leftrightarrow \Bigg(1+\dfrac{1}{n+1} \Bigg)^{n} * \Bigg(1+\dfrac{1}{n+1} \Bigg)^{1}
+                 > \Bigg(1+\dfrac{1}{n} \Bigg)^{n}$\\
+$\Leftrightarrow \Bigg(1+\dfrac{1}{n+1} \Bigg)^{n} 
+                 > \dfrac{\Bigg(1+\dfrac{1}{n} \Bigg)^{n}}
+                                        {\Bigg(1+\dfrac{1}{n+1} \Bigg)}$ \\
+$\Leftrightarrow \dfrac{\Bigg(1+\dfrac{1}{n+1} \Bigg)^{n}}
+                       {\Bigg(1+\dfrac{1}{n} \Bigg)^{n}} 
+                 > \dfrac{1}{\Bigg(\dfrac{n+1}{n+1}+\dfrac{1}{n+1} \Bigg)}$\\
+$\Leftrightarrow \dfrac{\Bigg(\dfrac{n+1}{n+1}+\dfrac{1}{n+1} \Bigg)^{n}}
+                       {\Bigg(\dfrac{n}{n}+\dfrac{1}{n} \Bigg)^{n}} 
+                 > \dfrac{1}{\Bigg(\dfrac{n+1}{n+1}+\dfrac{1}{n+1} \Bigg)}$\\               
+$\Leftrightarrow \dfrac{\Bigg(\dfrac{n+2}{n+1} \Bigg)^{n}}
+                       {\Bigg(\dfrac{n+1}{n} \Bigg)^{n}} 
+                 > \dfrac{1}{\Bigg(\dfrac{n+2}{n+1}\Bigg)}$\\                                
+$\Leftrightarrow \Bigg(\dfrac{n+2}{n+1} \Bigg)^{n} * \Bigg(\dfrac{n}{n+1} \Bigg)^{n}
+                 > \Bigg(\dfrac{n+1}{n+2} \Bigg)$ \\
+$\Leftrightarrow \Bigg(\dfrac{n^{2}+2n}{(n+1)^{2}} \Bigg)^{n}
+                 > \Bigg(\dfrac{n+1}{n+2} \Bigg)$ \\
+$\Leftrightarrow \Bigg(\dfrac{n^{2}+2n+1-1}{(n+1)^{2}} \Bigg)^{n}
+                 > \Bigg(\dfrac{n+1+1-1}{n+2} \Bigg)$ \\
+$\Leftrightarrow \Bigg(\dfrac{(n+1)^{2}-1}{(n+1)^{2}} \Bigg)^{n}
+                 > \Bigg(\dfrac{n+2-1}{n+2} \Bigg)$ \\                                                   
+$\Leftrightarrow \Bigg( 1- \dfrac{1}{(n+1)^{2}} \Bigg)^{n}
+                 > \Bigg( 1- \dfrac{1}{n+2} \Bigg)$ \\                                                   
+                 
+
+z.z. $\Bigg(1-\dfrac{1}{(n+1)^{2}} \Bigg)^{n} > \Bigg(1-\dfrac{1}{n+2} \Bigg)$ \\                  
+
+Beweis: \\
+$\Bigg(1 - \dfrac{1}{(n+1)^{2}} \Bigg)^{n}$ \\
+$\geq ^{A)} 1+n \Bigg(-\dfrac{1}{(n+1)^{2}} \Bigg)$ \\
+$\geq ^{A)} 1 -\dfrac{n}{n^{2}+2n+1} $ \\
+$> 1- \dfrac{n}{n^{2}+2n}$ \\
+$> 1- \dfrac{1}{n+2}$ \\
+
+ \hfill \square                                 
+%--------------------------------------------------
+
+\paragraph{Aufgabe 6}
+
+Zeigen Sie folgende Gleichheiten, wobei $x \epsilon \mathbb{R}$ beliebig ist:
+
+\subparagraph{a)}
+z.z. $sin(x+ \pi)= -sin(x)$\\
+
+Beweis: \\
+$sin(x+ \pi)$ \\
+$= sin(x)*cos( \pi)+cos(x)*sin( \pi)$ \\
+$= sin(x)*(-1)+cos(x)*0$ \\
+$= -sin(x)$ \\
+
+
+\subparagraph{b)}
+z.z. $cos(x+ \pi)=-cos(x)$ \\
+
+Beweis: \\
+$cos(x+ \pi)$ \\
+$= cos(x)*cos( \pi)+sin(x)*sin( \pi)$ \\
+$= cos(x)*(-1)+sin(x)*0$ \\
+$= -cos(x)$ \\
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 04}
+
+\paragraph{Aufgabe 1}
+
+Zeigen Sie das Additionstheorem für den Tangens Hyperbolicus: für alle $x_{1},x_{2} \epsilon \mathbb{R}$ gilt
+
+\begin{center}
+$tanh(x_{1} \mp x_{2})= 
+\dfrac{tanh(x_{1} \mp tanh(x_{2}))}{1 \mp tanh(x_{1})tanh(x_{2})}$
+\end{center}
+
+Additionstheoreme: \\
+$sinh(x \pm y)=sinh(x)cosh(y) \pm sinh(y)cosh(x)$ \\
+$cosh(x \pm y)=cosh(x)cosh(y) \pm sinh(x)sinh(y)$ \\
+
+Beweis: \\
+$tanh(x \pm y)$ \\
+$= \dfrac{sinh(x \pm y)}{cosh(x \pm y)}$ \\
+$= \dfrac{sinh(x)cosh(y) \pm sinh(y)cosh(x)}{cosh(x)cosh(y) \pm sinh(x)sinh(y)}$ \\
+$= \dfrac{\dfrac{sinh(x)cosh(y)}{cosh(x)cosh(y)} 
+          \pm \dfrac{sinh(y)cosh(x)}{cosh(x)cosh(y)}}
+         {\dfrac{cosh(x)cosh(y)}{cosh(x)cosh(y)} 
+          \pm \dfrac{sinh(x)sinh(y)}{cosh(x)cosh(y)}}$ \\
+$= \dfrac{\dfrac{sinh(x)}{cosh(x)} \pm \dfrac{sinh(y)}{cosh(y)}}
+         {1 \pm \dfrac{sinh(x)sinh(y)}{cosh(x)cosh(y)}}$ \\
+$= \dfrac{tanh(x) \pm tanh(y)}{1 \pm tanh(x)tanh(y)}$  \\
+
+\hfill \square      
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Die reelle Folge $(a_{n})_{n \epsilon \mathbb{N}}$ sei wie folgt definiert:
+
+\begin{center}
+$a_{1}=a_{2}=1$, $a_{n}=a_{n-1}+a_{n-2}$ für $n > 2$.
+\end{center}
+
+Ist die Folge $(a_{n})_{n \epsilon \mathbb{N}}$ ...
+
+\subparagraph{a)}
+... monoton steigend ober ab einem gewissen Index sogar streng monoton steigend?
+
+Behauptung: \\
+- monoton steigend bei $n \leq 2$ \\
+- streng monoton steigend ab $n > 2$ \\
+
+Beweis: \\
+$a_{1} \leq a_{2}$ \\
+$= 1 \leq 1$ \\
+
+Induktionsanfang: n=2 \\
+$a_{2} < a_{3}$ \\
+$= 1 < 2$ \\
+
+Induktionsschritt: \\
+
+Induktionsvoraussetzung: $a_{n} > a_{n-1}$ $\forall a_{n}$ mit $n \epsilon \mathbb{N}$ und $n > 2$
+
+Beweis: \\
+$a_{n+1}$ \\
+$= a_{n}+a_{n-1} >^{I.V.} a_{n}$ \\
+$= a_{n-1} > 0$ \\
+
+\hfill \square
+
+\subparagraph{b)}
+... beschränkt?
+
+Behauptung: \\
+reelle Folge $(a_{n})$ nach unten beschränkt \\
+
+Beweis: \\
+es existiert kein Folgeglied, dessen Wert kleiner ist als 1, da die Startwerte $a_{1}=a_{2}=1$ beginnen und die Funktion, ab dem Index $n=3$ streng monoton steigend ist, d.h. es existiert eine untere Schranke bei 1.
+
+\subparagraph{c)}
+... alternierend?
+
+Behauptung: \\
+Folge $(a_{n})$ ist nicht alternierend
+
+Beweis: \\
+es existieren keine negativen Werte \\
+(siehe Auswertung der Teilaufgaben A) und B) )\\
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Sei $(a_{n})_{n \epsilon \mathbb{N}}$ eine reelle Folge. Beweisen Sie folgende Aussage:
+
+Es ist $a \epsilon \mathbb{R}$ ein Häufungspunkt der Folge genau dann, wenn die Folge eine Teilfolge besitzt, die gegen a konvergiert.
+
+Behauptung: \\
+a HP von $(a_{n})n \epsilon \mathbb{N} \Leftrightarrow (a_{n})n \epsilon \mathbb{N}$ besitzt Teilfolge, die gegen a konvergiert \\
+
+Beweis: \\
+
+"$\Rightarrow $:" \\
+$\forall \varepsilon \epsilon \mathbb{R}, \forall N \epsilon \mathbb{N} \exists n \epsilon \mathbb{N}: n > N |a_{n}-a| \leq \varepsilon$ \\
+Sei $(\varepsilon _{k})k \epsilon \mathbb{N}$ eine Folge \\
+$\varepsilon _{k}= \dfrac{1}{k}$ und definiere $(n_{k})k \epsilon \mathbb{N}$ \\
+$n_{1} = 1$ \\
+$n_{k} = \{ n \epsilon \mathbb{N}, n > n_{k-1}, 1 |a_{n}-a| < \varepsilon, k > l \}$ \\
+$\exists n$ mit Eigenschaft als Definition von $(n_{k})k \epsilon \mathbb{N}$ \\
+Es gilt $n_{k+1} > n_{k}$ \\
+weil $|a_{n}-a| < \dfrac{1}{k} \forall k \geq 2$ gilt nach Satz 3.4. \\
+$\Rightarrow |a_{n}-a| \rightarrow 0$ und damit $a_{nk} \rightarrow a$\\
+
+"$\Leftarrow $:" \\
+Teilfolge von $(a_{n})$ konvergiert gegen a \\
+Sei U beliebige Umgebung von a \\
+au Definition von Konvergenz folgt: fast alle Folgeglieder der Teilfolge liegen in U \\
+es folgt: fast alle Folgeglieder der Teilfolge sind unendlich viele Folgeglieder der ursprünglich vielen Folgeglieder der ursprünglichen  Folge \\
+in U liegen unendlich viele Folgeglieder\\
+
+\hfill \square
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Bestimmen Sie alle Häufungspunkte und Grenzwerte der Folge $(a_{n})_{n \epsilon \mathbb{N}}$, sofern solche existieren. Begründen Sie Ihre Antworten. Dabei können Sie auf alle aus der Vorlesung bekannten Resultate sowie auf Aufgabe 3 zurückgreifen.
+
+\subparagraph{a)}
+$a_{n} = n^{4} - n^{3}$ für $n \geq 1$ \\
+$= n^{3}(-1) \geq n^{3}$ \\
+
+$a_{1}$ unbeschränkt und nicht konvergent nach 3.3 \\
+als Produkt zweier streng monotoner wachsender Folgen \\
+$a_{n}$ streng monoton wachsend \\
+jede Teilfolge unbeschränkt \\
+$\nexists$ Häufungspunkt \\
+
+\subparagraph{b)}
+$a_{n} =
+\begin{cases}
+1 & n \leq 10, \\
+\dfrac{1024}{log_{2}(n)} & n > 10
+\end{cases}$ \\
+
+Behauptung: $a_{n} \rightarrow 0$ \\
+
+Beweis: \\
+Sei $\varepsilon > 0$ beliebig \\
+$|\dfrac{1024}{log_{2}(n)} - 0| = \dfrac{1024}{log_{2}(n)} < \varepsilon$ für $n > 2^{\dfrac{1024}{\varepsilon}}$ \\
+konvergiert gegen 0 \\
+
+\subparagraph{c)}
+$a_{n} = \dfrac{(n+1)^{2}}{2n^{2}}$ für $n \geq 1$ \\
+$= \dfrac{n^{2}+2n+1}{2n^{2}}$ \\
+$= \dfrac{1}{2} (1+ \dfrac{2}{n} + \dfrac{1}{n^{2}})$\\
+
+$lim_{n \rightarrow \infty} a_{n} = \dfrac{1}{2}$ \\
+
+$lim_{n \rightarrow \infty} (a_{n}b_{n})$ \\
+$lim_{n \rightarrow \infty} a_{n} + lim_{n \rightarrow \infty} b_{n} = a+b$ \\
+
+falls $lim_{n \rightarrow \infty} a_{n} = a$ und
+      $lim_{n \rightarrow \infty} b_{n} = b$ \\
+
+\subparagraph{d)}
+$a_{n} = \dfrac{e^{n}}{2^{n}} + \dfrac{1}{n^{2}}$ für $n \geq 1$ \\
+$a_{n} \geq \dfrac{e^{n}}{2^{n}} = \Bigg(\dfrac{e}{2} \Bigg)^{n}$ \\
+$|\dfrac{e}{2}| > 1 \Rightarrow $ divergent \\
+$\Bigg(\dfrac{e}{2} \Bigg)^{n}$ streng monoton wachsend \\
+$\Rightarrow$ jede Teilfolge unbeschränkt \\
+$\Rightarrow$ kein Häufungspunkt \\
+
+\subparagraph{e)}
+$a_{n} = cos(n * \pi)$ für $n \geq 1$ \\
+
+$a_{n} =
+\begin{cases}
+1 & $für gerade n$
+-1 & $für ungerade n$
+\end{cases}$ \\
+
+Häufungspunkte liegen bei 1 und -1 \\
+
+\subparagraph{f)}
+$a_{n} = n^{2} * sin(n * \dfrac{\pi}{2})$ für $n \geq 1$ \\
+
+$a_{n} =
+\begin{cases}
+0 & n=2k
+n^{2} & n=4k+1
+-n^{2} & n=4k+3
+\end{cases} k \epsilon \mathbb{N} \cup \{0 \}$ \\
+
+Häufungpunkt bei 0 \\
+$a_{n} unbeschränkt$ \\
+sonst keine weiteren Häufungspunkte \\
+
+\subparagraph{g)}
+$a_{n} =
+\begin{cases}
+2^{n} & n\leq 17,
+\dfrac{2n}{n+2} & n > 17
+\end{cases}$ \\
+
+$a_{n}$ \\
+$= 2 \dfrac{n}{n+2} + \Bigg( \dfrac{1}{2} \Bigg)^{n}$ \\
+$= 2 \dfrac{1}{1+ \dfrac{2}{n}} + \Bigg( \dfrac{1}{2} \Bigg)^{n}$ \\
+
+$lim_{n \rightarrow \infty} a_{n}=2$ \\
+
+\subparagraph{h)}
+$a_{n} = \dfrac{sin(n)}{n}$ für $n \geq 1$ \\
+$|a_{n}| \leq \dfrac{1}{n}$ \\
+$\forall n lim_{n \rightarrow \infty} \dfrac{1}{n} = 0$ \\
+$lim_{n \rightarrow \infty} a_{n}=0$ \\
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 5}
+
+Gibt es eine beschränkte reelle Folge $(a_{n})_{n \epsilon \mathbb{N}}$ mit unendlich vielen Häufungspunkten? Begründen Sie Ihre Antwort.
+
+Beispiel einer Folge $(a_{n})$ mit Beschränkung im Intervall $]0, 1]$\\
+
+$\dfrac{1}{1} 
+\dfrac{1}{1} \dfrac{1}{2} 
+\dfrac{1}{1} \dfrac{1}{2} \dfrac{1}{3}
+\dfrac{1}{1} \dfrac{1}{2} \dfrac{1}{3} \dfrac{1}{4} ...$ \\
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 05}
+
+\paragraph{Aufgabe 1}
+
+Die reelle Folge $(a_{n})_{n \epsilon \mathbb{N}}$ sie gegeben durch
+
+\begin{center}
+$a_{n} = n(\sqrt{1+ \dfrac{1}{n}}-1)$, $n \epsilon \mathbb{N}$.
+\end{center}
+
+Konvergiert die Folge $(a_{n})_{n \epsilon \mathbb{N}}$? Falls ja, geben Sie ihren Grenzwert an.
+
+Beweis:
+
+$lim_{n \rightarrow \infty} a_{n}$ \\
+$= lim_{n \rightarrow \infty} (\sqrt{1+ \dfrac{1}{n}} - 1) * n$ \\
+$= lim_{n \rightarrow \infty} (\sqrt{n^{2}+n} - n) * n$ \\
+$= lim_{n \rightarrow \infty} \dfrac{n^{2}+n-n^{2}}{\sqrt{n^{2}+n} + n)} $ \\
+$= lim_{n \rightarrow \infty} \dfrac{1}}{\sqrt{1+\dfrac{1}{n}} + 1)} $ \\
+
+da $n \rightarrow \infty$, dann gilt $n >> 1$ \\
+
+z.z $lim_{n \rightarrow \infty} \sqrt{1+ \dfrac{1}{n}} = 1$ \\
+
+$(\sqrt{1+ \dfrac{1}{n}})^{2} = 1+ \dfrac{1}{n}$ \\
+$\leq 1+\dfrac{2}{n} + \dfrac{1}{n^{2}} = (1+ \dfrac{1}{n})^{2}$\\
+$\Rightarrow \sqrt{1 + \dfrac{1}{n}} \leq 1+\dfrac{1}{n} \longrightarrow 1$ \\
+$1 \leq \sqrt{1+ \dfrac{1}{n}} \leq 1+ \dfrac{1}{n} \longrightarrow 1$ \\
+
+$lim_{n \rightarrow \infty} a_{n}$ \\
+$lim_{n \rightarrow \infty} \dfrac{1}{\sqrt{1+ \dfrac{1}{n}}} +1}$ \\
+$= \dfrac{1}{lim_{n \rightarrow \infty} \sqrt{1+ \dfrac{1}{n}}} +1}$ \\
+$= \dfrac{1}{1+1} = \dfrac{1}{2}$ \\
+
+Daraus folgt, dass die Folge $a_{n}$ gegen den Grenzwert $\dfrac{1}{2}$ konvergiert.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Bestimmen Sie für alle folgenden Beispiele, welche der folgenden vier Fälle vorliegen: $(f_{n}) \epsilon o(g_{n})$, oder $(f_{n}) \epsilon O(g_{n})$, oder $(g_{n}) \epsilon o(f_{n})$, oder $(g_{n}) \epsilon O(f_{n})$. Begründen Sie Ihre Antworten.
+
+\begin{tabular}{c|c|c}
+& $(f_{n})_{n \epsilon \mathbb{N}}$ & $(g_{n})_{n \epsilon \mathbb{N}}$ \\
+\hline
+A) & $n log_{2}(n)$ & $n$ \\
+\hline
+B) & $10 n^{2} + 8n + 100$ & $n^{3}$ \\
+\hline
+C) & $10*log_{2}(n)$ & $log_{2}(n^{2})$ \\
+\hline
+D) & $e^{n}$ & $e^{n+1000}$ \\
+\hline
+E) & $n!$ & $2^{n}$ \\
+\hline
+F) & $(log_{2}(n))^{log_{2}(n)}$ & $2^{((log_{2}(n))^{2})}$ \\
+\end{tabular}
+
+Hinweis: Sie dürfen verwenden, dass $lim_{n \rightarrow \infty} (\dfrac{log_{2}(n)}{n}) = 0$. \\
+
+$(f_{n}) \epsilon O(g_{n}) \Leftrightarrow \dfrac{f_{n}}{g_{n}}$  ist beschränkt \\
+$(f_{n}) \epsilon o(g_{n}) \Leftrightarrow \dfrac{f_{n}}{g_{n}}$  ist Nullfolge \\
+
+\subparagraph{a)}
+
+$(g_{n}) \epsilon o(f_{n})$ und $(g_{n}) \epsilon O(f_{n})$ \\
+
+$\dfrac{g_{n}}{f_{n}}= \dfrac{n}{n log_{2}(n)}$ \\
+$= \dfrac{1}{log_{2}(n)} \longrightarrow 0$
+
+\subparagraph{b)}
+
+$(f_{n}) \epsilon o(g_{n})$ und $(f_{n}) \epsilon O(g_{n})$ \\
+
+$\dfrac{f_{n}}{g_{n}} = \dfrac{10n^{2}+8n+100}{n^{3}} \longrightarrow 0$ \\
+
+\subparagraph{c)}
+
+$(g_{n}) \epsilon O(f_{n})$ und $(f_{n}) \epsilon O(g_{n})$ \\
+
+$\dfrac{g_{n}}{f_{n}} = \dfrac{log_{2}(n^{2})}{10 log_{2}(n)}$ \\
+$= \dfrac{2}{10} = \dfrac{1}{5}$
+
+$\dfrac{f_{n}}{g_{n}} = 5$ 
+
+\subparagraph{d)}
+
+$(g_{n}) \epsilon O(f_{n})$ und $(f_{n}) \epsilon O(g_{n})$ \\
+
+$\dfrac{g_{n}}{f_{n}} = \dfrac{e^{n}}{e^{n+1000}} = \dfrac{1}{e^{1000}}$ \\
+
+$\dfrac{f_{n}}{g_{n}} = e^{1000}$ 
+
+\subparagraph{e)}
+
+$(g_{n}) \epsilon o(f_{n})$ und $(g_{n}) \epsilon O(f_{n})$ \\
+
+$\dfrac{g_{n}}{f_{n}} = \dfrac{2^{n}}{n!}$ \\
+$= \dfrac{2*2*2 ... *2*2}{n*(n-1)*(n-2)...2*1}$ \\
+$\leq \dfrac{4}{n} \longrightarrow 0$
+
+\subparagraph{f)}
+
+$(f_{n}) \epsilon o(g_{n})$ und $(f_{n}) \epsilon O(g_{n})$ \\
+
+$\dfrac{f_{n}}{g_{n}} = \dfrac{(log_{2}(n))^{log_{2}(n)}}{n^{log_{2}(n)}} \longrightarrow 0$ \\
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Die reelle Folge $(a_{n})_{n \epsilon \mathbb{N}}$ sei wie folgt definiert:
+
+\begin{center}
+$a_{1}= \dfrac{1}{2}$, $a_{n+1}= \dfrac{1}{1+ a_{n}}$ für $n \geq 2$.
+\end{center}
+
+Zeigen Sie, dass ...
+
+\subparagraph{a)}
+... $\dfrac{1}{2} \leq a_{n} \leq 1$ für alle $n \epsilon \mathbb{N}$ gilt. \\
+
+Beweis:  \\
+Induktionsanfang $n=1$ \\
+
+$a_{1}= \dfrac{1}{2}$ \\
+$\dfrac{1}{2} \leq a_{1} \leq 1 =\dfrac{1}{2} \leq \dfrac{1}{2} \leq 1$ \\
+
+Induktionsschritt $n \rightarrow n+1$ \\
+
+IV: für alle feste, aber beliebige $n \epsilon \mathbb{N}$ gilt $\dfrac{1}{2} \leq a_{n} \leq 1$ \\
+
+IB: es gelte $n \epsilon \mathbb{N}$: $\dfrac{1}{2} \leq a_{n+1} \leq 1$ \\
+
+Beweis: \\
+
+$a_{n+1} = \dfrac{1}{1+ a_{n}}$ und $\dfrac{1}{2} \leq a_{n} \leq 1$ \\
+dann gilt: $\dfrac{3}{2} \leq a_{n+1} \leq 2$ \\
+$\Leftrightarrow \dfrac{3}{2} \leq \dfrac{1}{a_{n}} \leq 2$ \\
+$\Leftrightarrow^{IV.} \dfrac{1}{2} \leq \dfrac{1}{a_{n}+1} \leq 1$ \\
+$\Leftrightarrow \dfrac{1}{2} \leq a_{n+1} \leq 1$ \\
+
+\hfill \square 
+
+\subparagraph{b)}
+... die Folge konvergiert. \\
+
+Behauptung: $(a_{n})_{n \epsilon \mathbb{N}}$ konvergiert, weil Cauchy Folge in $\mathbb{R}$ \\
+
+z.z: $a=lim_{n \rightarrow \infty} a_{n}$ $a \geq 0$, da $a_{n} > 0 \forall n$ gilt \\
+
+Beweis: \\ 
+es gelte $a < 0$ \\
+
+z.z. $(a_{n})_{n \epsilon \mathbb{N}}$ konvergiert nicht gegen a \\
+
+$\exists \varepsilon_{0} > 0 \forall n \epsilon \mathbb{N} \exists n_{0} \geq n |a_{n_{0}}-a| > \varepsilon$ \\
+
+Sei $a < 0$ beliebig \\
+wähle $\varepsilon_{0} := -\dfrac{a}{2} >0$ \\
+
+Sei $n \epsilon \mathbb{N}$ beliebig, dann setze $n_{0} := n$ \\
+es gilt: \\
+$|a_{n_{0}}-a|=|a_{n_{0}}|+|a| \geq |\dfrac{a}{2}| = \varepsilon_{0}$ \\
+
+also gilt: $lim_{n \rightarrow \infty} \geq 0$ \\
+$(a_{n}-a_{n+1})_{n \epsilon \mathbb{N}}$ Nullfolge \\
+
+Anwendung Grenzwertsätze \\
+$lim_{n \rightarrow \infty} (a_{n} - a_{n+1}) = 0$ \\
+$\Leftrightarrow lim_{n \rightarrow \infty} (a_{n} - \dfrac{1}{1+a_{n}}}) = 0$ \\
+$\Leftrightarrow lim_{n \rightarrow \infty} a_{n} - \dfrac{lim_{n \rightarrow \infty} 1}{lim_{n \rightarrow \infty} 1+ lim_{n \rightarrow \infty} a_{n}}} = 0$ \\
+$\Leftrightarrow a- \dfrac{1}{1+ a_{n}} = 0$ \\
+$\Leftrightarrow a*(1+a)-1 = 0$ \\
+$\Leftrightarrow a+a^{2}=1$ \\
+
+$a > 0$, a positive Lösung $\longrightarrow $ Grenzwert \\
+
+\subparagraph{c)}
+... der Grenzwert durch $\dfrac{\sqrt{5}-1}{2}$ gegeben ist.\\
+
+$x^{2}+x=1$ \\
+$\Leftrightarrow x^{2}+x-1=0$ \\
+
+$x_{1/2}=- \dfrac{1}{2} \pm \sqrt{\dfrac{1}{4} +1}$ \\
+$=- \dfrac{1}{2} \pm \dfrac{1}{2} \sqrt{5}$\\
+
+$x_{1}=\dfrac{\sqrt{5}-1}{2}$ und $x_{2}=- \dfrac{\sqrt{5}-1}{2}$ \\
+
+da $x_{2} < 0$ folgt: \\
+$lim_{n \rightarrow \infty} a_{n} = x_{1} = \dfrac{\sqrt{5}-1}{2}$ \\
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 06}
+
+\paragraph{Aufgabe 1}
+
+Zeigen Sie unter Verwendung des Banachschen Fixpunktsatzes, dass $f:[0,1] \rightarrow [0,1]$ mit
+
+\begin{center}
+$f(x) = \dfrac{x+ \dfrac{1}{2}}{x+1}$
+\end{center}
+
+genau einen Fixpunkt hat.
+
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Entscheiden Sie für jede der folgenden Reihen, ob die Riehekonvergiert oder nicht. Begründen Sie Ihre Antworten.
+
+\subparagraph{a)}
+$\sum^{\infty}_{n=1} \dfrac{4 * 2^{n+1}}{3^{n}}$
+
+\subparagraph{b)}
+$\sum^{\infty}_{n=1} \dfrac{n!}{n^{2n}}$
+
+\subparagraph{c)}
+$\sum^{\infty}_{n=2} (-1)^{n} \dfrac{n}{n^{2}-1}$
+
+\subparagraph{d)}
+$\sum^{\infty}_{n=1} (\dfrac{n+1}{n})^{n}$
+
+\subparagraph{e)}
+$\sum^{\infty}_{n=1} \dfrac{1}{\sqrt{n}}$
+
+\subparagraph{f)}
+$\sum^{\infty}_{n=1} \dfrac{1}{n+ \sqrt{n}}$
+
+\subparagraph{g)}
+$\sum^{\infty}_{n=1} a_{n}$ 
+mit $a_{n} = 
+\begin{cases}
+2^{-n} & $falls n gerade $ \\
+3^{-n} & $falls n ungerade $ 
+\end{cases}$
+
+\subparagraph{h)}
+$\sum^{\infty}_{n=1} 
+\begin{pmatrix}
+k \\ n 
+\end{pmatrix}$ für ein $k \epsilon \mathbb{N}$ 
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Sei $(a_{n})_{n \epsilon \mathbb{N}}$ eine monoton fallende Folge mit $a_{n} > 0$ für alle $n \epsilon \mathbb{N}$. Beweisen Sie die folgende Äquivalenz:
+
+\begin{center}
+$\sum^{\infty}_{n=1} a_{n} $konvergiert$ \Leftrightarrow \sum^{\infty}_{n=1} 2^{n}a_{2^{n}} $ konvergiert
+\end{center}
+
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Bestimmen Sie den Konvergenzradius der folgenden Potenzreihen.
+
+Hinweis: Sie dürfen verwenden, dass $lim_{n \rigtharrow \infty}  \sqrt[n]{n}=1$.
+
+\subparagraph{a)}
+$\sum^{\infty}_{n=0} 2^{n^{2}} x^{n}$
+
+\subparagraph{b)}
+$\sum^{\infty}_{n=0} (2- \dfrac{1}{n})^{n} x^{n}$
+
+\subparagraph{c)}
+$\sum^{\infty}_{n=0} n^{2} 5^{n} x^{n}$
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 07}
+
+\paragraph{Aufgabe 1}
+
+Bestimmen Sie die Grenzwerte $lim_{x \rightarrow \infty} f(x)$ für die folgenden Angaben von $x_{0} \epsilon \mathbb{R} \bigcup \{ - \infty, + \infty \}$ und $f:D \rightarrow \mathbb{R}$ mit $D \subseteq \mathbb{R}$.
+
+\subparagraph{a)}
+$x_{0}=2$, $f: \mathbb{R} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x)=10x$
+\end{center}
+
+\subparagraph{b)}
+$x_{0}=2$, $f: \mathbb{R}\textbackslash \{2 \} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x)= \dfrac{4x^{2}-8x}{x-2}$
+\end{center}
+
+\subparagraph{c)}
+$x_{0}=- \infty $, $f: \mathbb{R}\textbackslash \{0 \} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x)= \dfrac{sin(x)}{x}$
+\end{center}
+
+\subparagraph{d)}
+$x_{0}=5$, $f: [1, 5[ \bigcup ]5, \infty[ \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x)=\dfrac{\sqrt{x-1}-2}{x-5}$
+\end{center}
+
+\subparagraph{e)}
+$x_{0}=1$, $f: \mathbb{R} \textbackslash \{1 \} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x)= \dfrac{1}{1-x} - \dfrac{3}{1-x^{3}}$
+\end{center}
+
+\subparagraph{f)}
+$x_{0}= \infty$, $f: \mathbb{R} \textbackslash \{-1 \} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x)= \dfrac{2-x}{1+x}$
+\end{center}
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Sei $D=]a, b[ \textbackslash \{x_{0} \}$, wobei $a,b \epsilon \mathbb{R} \bigcup \{- \infty, + \infty \}$ und $x_{0} \epsilon \mathbb{R}$ mit $a < x_{0} < b$. Sie $f:D \rightarrow \mathbb{R}$ und sei $c \epsilon \mathbb{R}$. Zeigen Sie, dass f genau dann gegen c bei $x_{0}$ existieren und gleich c sind.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Begründen Sie Ihre Antworten.
+
+\subparagraph{a)}
+Ist die Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x) = 
+\begin{cases}
+2x+6 & x < -1 \\
+|x-2|+x^{2} & x\geq -1
+\end{cases}$
+\end{center}
+
+an der Stelle $x_{0} = -1$ stetig?
+
+\subparagraph{b)}
+Bestimmen Sie $a,b \epsilon \mathbb{R}$, sodass $f: \mathbb{R} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x) = 
+\begin{cases}
+-ax & x < 1 \\
+x^{2}+b & x\geq 1
+\end{cases}$
+\end{center}
+
+an der Stelle $x_{0} = 1$ stetig ist und $f(-1)=1$ gilt.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Sind die folgenden Funktionen stetig? Begründen Sie Ihre Antworten.
+
+\subparagraph{a)}
+$f: \mathbb{R} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$f(x)= \sqrt{|sin(x^{2}-8x+2)|} * exp(x-1)$
+\end{center}
+
+\subparagraph{b)}
+$g: \mathbb{R} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$g(x)= 
+\begin{cases}
+1 & x \leq - \dfrac{\pi}{2} \\
+cos(x) & - \dfrac{\pi}{2} < x < \pi \\
+-sin(x- \dfrac{\pi}{2}) & x \geq \pi
+\end{cases}$
+\end{center}
+
+\subparagraph{c)}
+$h: \mathbb{R} \rightarrow \mathbb{R}$ mit
+
+\begin{center}
+$h(x)= 
+\begin{cases}
+\dfrac{x}{\sqrt{|x|}} & x \leq - 4 \\
+x^{2+3x-6 }& - 4 < x < 0 \\
+3^{\dfrac{x}{2}} & x \geq 0
+\end{cases}$
+\end{center}
+
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 5}
+
+Sei $a,b \epsilon \mathbb{R}$ mit $a \leq b$. Die Funktion $f:[a, b] \rightarrow [a, b]$ sei stetig auf $[a, b]$. Zeigen Sie, dass f mindestens einen Fixpunkt besitzt, d.h es existiert $x_{0} \epsilon [a, b]$ mit $f(x_{0})=x_{0}$.
+
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\section{Blatt 08}
+
+\paragraph{Aufgabe 1}
+
+Entscheiden Sie, welche der folgenden Funktionen gleichmäßig stetig sind. Begründen Sie Ihre Antworten.
+
+\subparagraph{a)}
+$f:[0, + \infty [ \rightarrow \mathbb{R}$ mit $f(x)= \sqrt{x}$
+
+\subparagraph{b)}
+$f:[0, + \infty [ \rightarrow \mathbb{R}$ mit $f(x)= x^{2}$
+
+\subparagraph{c)}
+$f:]0, 10] \rightarrow \mathbb{R}$ mit $f(x)= \dfrac{1}{x}$
+
+\subparagraph{d)}
+$f:[1, + \infty [ \rightarrow \mathbb{R}$ mit $f(x)= \dfrac{1}{x}$
+
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Entscheiden Sie, an welchen Stellen die Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$ differenzierbar ist. Begründen Sie Ihre Antworten.
+
+\subparagraph{a)}
+$f(x) =x*|x|$
+
+\subparagraph{b)}
+$f(x) =
+\begin{cases}
+sin(x+1) & x \leq 0 \\
+1 & x > 0
+\end{cases}$
+
+\subparagraph{c)}
+$f(x) =
+\begin{cases}
+x^{2}-3x+3 & x \leq 2 \\
+exp(x-2) & x > 2
+\end{cases}$
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Zeigen Sie, dass die Funktion $f: \mathbb{R}^{+} \rightarrow \mathbb{R}$ mit $f(x)=x^{x}$ differenzierbar ist und $f'(x)= x^{x}(1+ln(x))$ gilt.
+
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Bestimmen Sie die Ableitung $f':D \rightarrow \mathbb{R}$ für die folgenden Angaben von $f:D \rightarrow \mathbb{R}$ mit $D \subseteq \mathbb{R}$.
+
+\subparagraph{a)}
+$f:]0, \dfrac{\pi}{2}[ \rightarrow \mathbb{R}$ mit $f(x)=(cos(x))^{sin(x)}$
+
+\subparagraph{b)}
+$f:\mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)=(cos(x))^{5}*sin(x^{4})*x^{3}$
+
+\subparagraph{c)}
+$f:\mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)=e^{e^{x}}$
+
+\subparagraph{d)}
+$f:\mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)=log_{3}(e^{2x+1})$
+
+\subparagraph{e)}
+$f:\mathbb{R}^{+} \rightarrow \mathbb{R}$ mit $f(x)=x*ln(x)-x$
+
+\subparagraph{f)}
+$f:\mathbb{R}^{+} \rightarrow \mathbb{R}$ mit $f(x)=ln(x^{3x})$
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 09}
+
+\paragraph{Aufgabe 1}
+
+Sei $f:\mathbb{R} \rightarrow \mathbb{R}$ eine differenzierbare Funktion, die achsensymmetrisch zur y-Achse ist, d.h. es gilt $f(x)=f(-x)$ für alle $x \epsilon \mathbb{R}$. Zeigen Sie, dass $f': \mathbb{R} \rightarrow \mathbb{R}$ punktsymmetrisch zu $(0, 0)$ ist, d.h. es gilt $f'(x)= -f'(-x)$ für alle $x \epsilon \mathbb{R}$
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+\subparagraph{a)}
+Bestimmen Sie alle (lokalen und globalen) Minima und Maxima der Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)= \dfrac{3}{4} x^{4} - 10x^{3} +24x^{2} + 5$, sofern solche existieren. Begründen Sie Ihre Antworten.
+
+\subparagraph{b)}
+Bestimmen Sie alle globalen Minima der Funktion $g: \mathbb{R} \rightarrow \mathbb{R}$ mit $g(x)= \dfrac{3}{4}x^{4} - 10x^{3} + 24x^{2} + cos(2x-16+ \pi)$. Begründen Sie Ihre Antworten.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Sei $a \epsilon \mathbb{R}$ beliebig, aber fest. Zeigen Sie, dass die Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)=x^{3}-3x+a$ höchstens eine Nullstelle im Intervall $[0, 1]$ hat.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Ein Auto fährt von Tübingen nach Stuttgart, ein anderes au der gleichen Strecke von Stuttgart nach Tübingen. Sie fahren beide zum gleichen Zeitpunkt $T_{0}$ los und treffen sich zu einem Zeitpunkt $T_{1}$ genau auf halber Strecke. Zeigen Sie, dass es einen Zeitpunkt T mit $T_{0} < T < T_{1}$ gibt, an dem die beiden Autos exakt die gleiche Geschwindigkeit haben.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 5}
+
+Beweisen Sie, dass für jedes $n \epsilon \mathbb{N}$ die n-te Ableitung $f^{(n)}$ der Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)=x*e^{x-1}$ durch
+
+\begin{center}
+$f^{(n)}(x)=(x+n)e^{x-1}$
+\end{center}
+
+gegeben ist.
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 10}
+
+\paragraph{Aufgabe 1}
+
+Beweisen Sie die folgende Aussage:
+
+Seien $a,b \epsilon \mathbb{R}$ mit $a < b$. Sei $f:[a, b] \rightarrow \mathbb{R}$ stetig, auf $[a, b]$ streng monoton steigend und auf $]a, b[$ differenzierbar. Dann gilt $f'(x) \geq 0$ für alle $x \epsilon ]a, b[$ und es existiert kein Intervall $]e, f[$ mit $a \leq e < f \leq b$, sodass $f'(x)=0$ für alle $x \epsilon ]e, f[$ gilt.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Ein Grundstück soll aus einem Rechteck und einem - an einer beliebigen Seite - bündig angrenzenden Halbkreis bestehen. Der Umfang des Grundstücks soll 500 Meter betragen, die Fläche des Grundstücks soll maximal sein. Wie groß müssen die Seitenlängen des Rechtecks und der Kreisradius gewählt werden?
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Bestimmen Sie die folgenden Grenzwerte und begründen Sie Ihre Antworten.
+
+\subparagraph{a)}
+\begin{center}
+$lim_{x \rightarrow 0} \dfrac{1-cos(x)}{x}$
+\end{center}
+
+\subparagraph{b)}
+\begin{center}
+$lim_{x \rightarrow 0} \dfrac{x}{tan(x)}$
+\end{center}
+
+\subparagraph{c)}
+\begin{center}
+$lim_{x \rightarrow + \infty} \dfrac{ln(x)}{x}$
+\end{center}
+
+\subparagraph{d)}
+\begin{center}
+$lim_{x \rightarrow + \infty} \dfrac{x^{2}+ln(x)}{x^{2}-ln(x)}$
+\end{center}
+
+\subparagraph{e)}
+\begin{center}
+$lim_{x \rightarrow + \infty} \dfrac{e^{x}}{x^{2}}$
+\end{center}
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Zeigen Sie, dass
+
+\begin{center}
+$lim_{n \rightarrow \infty} \sqrt[n]{n}=1$
+\end{center}
+
+gilt.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 5}
+
+Bestimmen Sie die Taylorreihe von $f:\mathbb{R} \rightarrow \mathbb{R}$ mit $f(x)=x^{3}-x^{2}+1$ um die Entwicklungsstelle $a=1$. Zeigen Sie, dass die Taylorreihe bei jedem $x \epsilon \mathbb{R}$ gegen $f(x)$ konvergiert.
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 11}
+
+\paragraph{Aufgabe 1}
+
+Für $k \epsilon \mathbb{N} \cup \{0 \}$ bezeichne $C^{k}$ die Menge aller Funktionen $f: \mathbb{R} \rightarrow \mathbb{R}$, die auf ganz $\mathbb{R}$ mindestens k-mal stetig differenzierbar sind. Außerdem bezeichne $C^{\infty}$ die Menge aller Funktionen $f:\mathbb{R} \rightarrow \mathbb{R}$, die auf ganz $\mathbb{R}$ beliebig oft differenzierbar sind. Zeigen Sie, dass jede Inklusion in
+
+\begin{center}
+$C^{\infty} \subset ... \subset C^{k+1} \subset C^{k} \subset ... \subset C^{0}$
+\end{center}
+
+echt ist, das heißt, dass für alle $k \epsilon \mathbb{N} \cup \{0 \}$
+
+\begin{center}
+$C^{k+1} \neq C^{k}$
+\end{center}
+
+gilt.
+
+Hinweis: Wenn es Ihnen nicht gelingt, die Behauptung (1) für allgemeines $k \epsilon \mathbb{N} \cup \{0 \}$ zu zeigen, dann zeigen Sie die Behauptung (1) zumindest für $k=1$ und $k=2$.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+Sei $f:\mathbb{C} \rightarrow \mathbb{C}$ holomorph. Zeigen Sie:
+
+\subparagraph{a)}
+Wenn wenigstens eine der beiden Funktionen u=Ref(Realteil) und v=Imf(Imaginärteil) konstant ist, so ist f konstant.
+
+\subparagraph{b)}
+Falls auch f* holomorph ist, so ist f konstant.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+\subparagraph{a)}
+Entscheiden Sie, welche der folgenden Funktionen Riemann-intergrierbar sind. Begründen Sie Ihre Antworten.
+
+(i) $f:[0, 1] \rightarrow \mathbb{R}$ mit 
+
+\begin{center}
+$f(x)=
+\bgein{cases}
+0 & x \neq \dfrac{1}{2} \\
+1 & x = \dfrac{1}{2}
+\end{cases}$
+\end{center}
+
+(ii) $f:[0, 1] \rightarrow \mathbb{R}$ mit 
+
+\begin{center}
+$f(x)=
+\bgein{cases}
+0 & x \leq \dfrac{1}{4} \\
+1 & \dfrac{1}{4} < x < \dfrac{3}{4} \\
+0 & x \geq \dfrac{3}{4}
+\end{cases}$
+\end{center}
+
+(iii) $f:[0, 2] \rightarrow \mathbb{R}$ mit 
+
+\begin{center}
+$f(x)=
+\bgein{cases}
+ln(-x^{3}+3x^{2}+9x+5) & x \leq 1 \\
+3 & x > 1
+\end{cases}$
+\end{center}
+
+(iv) $f:[0, 2] \rightarrow \mathbb{R}$ mit 
+
+\begin{center}
+$f(x)= \int_{0}^{x} g(y) dy$,
+\end{center}
+
+wobei $g:[0, 2] \rightarrow \mathbb{R}$ stetig mit $g(x) \geq 0$ für alle $x \epsilon [0, 2]$ ist.
+
+\subparagraph{b)}
+Sei $f:[a, b] \rightarrow \mathbb{R}$ stetig mit $f(x) \geq 0$ für alle $x \epsilon [a, b]$ und es gelte $\int^{b}_{a} f(x) dx = 0$. Zeigen Sie, dass dann $f(x)=0$ für alle $x \epsilon [a, b]$ gilt.
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 4}
+
+Bestimmen Sie
+
+\begin{center}
+$lim_{x \rightarrow 0} \dfrac{1}{x^{4}} \int_{x^{4}}^{2x^{4}} cos(y^{2}) dy$.
+\end{center}
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Blatt 12}
+
+\paragraph{Aufgabe 1}
+
+Berechnen Sie die folgenden Integrale:
+
+Nach Satz 7.5 der Vorlesung gilt $\int^{b}_{a} f(x) dx = F(b)-F(a)$, falls F eine Stammfunktion von f ist.
+
+\subparagraph{a)}
+$\int_{1}^{3} x^{2}-sin(x)+e^{3x} dx$ \\
+
+Stammfunktion: $\dfrac{1}{3} x^{3} + cos(x) + \dfrac{1}{3}e^{3x}$ 
+
+das folgt aus Tabelle 7.5, wegen $\dfrac{d}{dx} [ f(x)+g(x) ] = f'(x) + g'(x)$ und $\dfrac{d}{dx} f(k*x) = k* f'(kx)$ für $k \epsilon \mathbb{R}$ \\
+
+$\int^{3}_{1} x^{2}-sin(x)+e^{3x} dx$ \\
+$=9 + cos(3)+ \dfrac{1}{3}e^{9}-\dfrac{1}{3}-cos(1)-\dfrac{1}{3}e^{3}$\\
+$=\dfrac{26}{3}+cos(3)+\dfrac{1}{3}e^{9}-cos(1)-\dfrac{1}{3}e^{3}$
+
+\subparagraph{b)}
+$\int_{- \dfrac{\pi}{4}}^{\dfrac{\pi}{4}} 1+(tan(x))^{2} dx$ \\
+
+Stammfunktion: tan(x)
+
+das folgt aus Tabelle 6.7 aus der Vorlesung
+
+\subparagraph{c)}
+$\int_{1}^{4} 3 ln(x)+3 dx$ \\
+
+Stammfunktion: $3x ln(x)$
+
+das folgt aus Tabelle 7.5 aus der Vorlesung, wegen $\dfrac{d}{dx} [ f(x)+g(x) ] = f'(x) + g'(x)$ 
+
+\subparagraph{d)}
+$\int_{\dfrac{\pi}{4}}^{\dfrac{3 \pi}{4}} \dfrac{cos(x)}{sin(x)} dx$ \\
+
+Stammfunktion: $ln(sin(x))$
+
+das folgt wegen $\dfrac{d}{dx} ln(f(x))= \dfrac{f'(x)}{f(x)}$ auf Grund der Symmetrie des Sinus um $\dfrac{\pi}{2}$
+
+
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 2}
+
+\subparagraph{a)}
+Bestimmen Sie $a,b \epsilon \mathbb{R}$, so dass für alle $x \epsilon \mathbb{R} \textbackslash \{ \pm 1 \}$ gilt:
+
+\begin{center}
+$\dfrac{1}{x^{2}-1} = \dfrac{a}{x-1} + \dfrac{b}{x+1}$
+\end{center}
+
+\subparagraph{b)}
+Verwenden Sie A), um das folgende Integral zu berechnen:
+
+\begin{center}
+$\int_{2}^{7} \dfrac{1}{x^{2}-1} dx$
+\end{center}
+
+%--------------------------------------------------
+
+\paragraph{Aufgabe 3}
+
+Berechnen Sie die folgenden Integrale:
+
+\subparagraph{a)}
+
+\begin{center}
+$\int_{0}^{\pi} x^{2} cos(x) dx$
+\end{center}
+
+\subparagraph{b)}
+
+\begin{center}
+$\int_{1}^{3} (x^{2}+1) ln(x) dx$
+\end{center}
+
+\subparagraph{c)}
+
+\begin{center}
+$\int_{0}^{\pi} (sin(x))^{2} dx$
+\end{center}
+
+\subparagraph{d)}
+
+\begin{center}
+$\int_{0}^{\dfrac{\pi}{2}} sin(x)* cos(x) dx$
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
