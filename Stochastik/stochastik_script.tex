@@ -62,7 +62,53 @@
 
 %----------------------------------------------------------------------------------------
 
-\section{eins}
+\section{Abkürzungen}
 
+W' : Wahrscheinlichkeiten
+
+%----------------------------------------------------------------------------------------
+
+\section{Grundbegriffe}
+
+\subsection{Wahrscheinlichkeitstheorie}
+
+\underline{Notizen}
+
+$P ({x}) = x \epsilon \Omega $
+
+W' , dass das Ergebnis des zufälligen Experiments gleich x ist, sofern ${x} \epsilon F$, also ein Ereignis ist.
+
+W' maß $P: F \rightarrow [0,1]$ mit 
+\begin{itemize}
+\item $P( \varnothing ) = 0$
+\item $P( \Omega ) = 1$
+\item $P(A_{1} \cup A_{2} \cup ... ) = P(A_{1})+P(A_{2})+... $
+\end{itemize}
+für Folgen $A_{1}, A_{2},... \epsilon F$von paarweisen disjunkten Ereignissen.
+
+Beispiel: zweifacher Münzwurf
+
+$\Omega = {0,1} ^{2} = {0,1} x {0,1} = {(0,0),(0,1),(1,0),(1,1)}$
+
+$F = P( \Omega ) = {\varnothing , {(0,0)}, {(0,1)}, ... , {(0,0),(0,1)}, ... , \Omega }$ $\Rightarrow$ 16 Elemente
+
+z.B. $P({(0,0),(0,1)}) = P({(0,0)})+P({(0,1)}) = q^{2}+ pq = q (q+p) = q (1-p+p) = q $
+
+Anzahl der 1er:
+
+$X: \Omega \rightarrow {0,1,2}$ mit
+\begin{itemize}
+\item $X(0,0)=0$
+\item $X(0,1)= X(1,0)=1$
+\item $X(1,1)= 2$
+\end{itemize}
+
+ODER: $X(w_{1},w_{2})=w_{1}+w_{2}$
+
+z.B. $P(X^{-1}({1})) = P({(0,1),(1,0)})= 2pq$
+
+%----------------------------------------------------
+
+\subsection{Statistik}
 
 \end{document}
