@@ -62,7 +62,42 @@
 
 %----------------------------------------------------------------------------------------
 
-\section{Abkürzungen}
+\section{Vorwort}
+
+\subsection{Stochastik}
+
+Beschreibungen von zufälligen Vorgängen, z.B.:
+
+\begin{itemize}
+\item Münzwurf, Lotto, Würfel, ...
+\item Regentropfen, Katastrophen, radioaktiver Zerfall, ...
+\item Warteschlangen
+\item Zinsenentwicklung, Aktienkurse, ...
+\item Abstimmungen, Wahlergebnisse
+\item Wetter
+\item Vererbung, Mutation
+\end{itemize}
+
+\underline{Experimente}
+
+\begin{itemize}
+\item zufällige Vorgänge nennt man Experiment
+\item das Ergebnis beschreibt den Ausgang des Experiments
+\item ein Ereignis ist eine Menge von Ergebnissen, der wir einer Wahrscheinlichkeit zuordnen können
+\end{itemize}
+
+\underline{Aufbau}
+
+\begin{itemize}
+\item Modellbildung (stochastisches Modell)
+Ziel ist die Beschreibung von Experimenten
+\item Wahrscheinlichkeitstheorie
+Methoden und Werkzeuge für die Untersuchung von stochastischen Modellen
+\item Statistik
+Justierung und Überprüfung eines Modells anhand von Daten
+\end{itemize}
+
+\subsection{Abkürzungen}
 
 W' : Wahrscheinlichkeiten
 
@@ -72,7 +107,69 @@ W' : Wahrscheinlichkeiten
 
 \subsection{Wahrscheinlichkeitstheorie}
 
-\underline{Notizen}
+\paragraph{Definition 1.1}
+
+Es sei $ \Omega \neq \varnothing$ eine Menge, der Grundraum. Eine Familie $F \subseteq P( \Omega)$ von Teilmengen heißt $ \sigma$-Algebra, wenn gilt:
+
+\begin{itemize}
+\item leere Menge $ \varnothing$ liegt in F
+\item aus $A \epsilon F$ folgt $ \Omega \setminus A \epsilon F$
+\item für $A_{1}, A_{2}, ... \epsilon F$ gilt $A_{1} \cup A_{2} \cup ... \epsilon F$
+\end{itemize}
+
+Eine Abbildung $\mu : F \rightarrow [0, \infty ]$ heißt Maß auf $(\Omega, F)$, wenn gilt:
+
+\begin{itemize}
+\item $\mu (\varnothing) = 0$
+\item $\sigma$-Additivität: Ist $A_{1}, A_{2},A_{3},... $ eine Folge von paarweisen disjunkten Elementen in F, dann gilt $\mu (A_{1} \cup A_{2} \cup ...) = \mu  (A_{1}) + \mu (A_{2}) + ...$ 
+\end{itemize}
+
+Das Tripel $( \Omega, F, \mu)$ heißt Maßraum.
+
+\paragraph{Bemerkung 1.2}
+
+Ist $\Omega$ eine beliebige Menge, dann ist $\zeta : P(\Omega) \rightarrow [0, \infty ]$ mit $\zeta (A) = |A| $ ein Maß, welches Zählmaß heißt.
+
+\paragraph{Bemerkung 1.3}
+
+Die Begriffe Länge, Fläche, Volumen sind Maße auf geeigneten $\sigma$-Algebra von $ \mathbb{R}, \mathbb{R}^{2} , \mathbb{R}^{3}$ definiert. Diese $\sigma$-Algebra enthalten alle Intervalle achsenparallele Rechtecke, achsenparallele Quader. Allgemein ist das d-dimensionale Volumen von geeigneten Teilmengen des $\mathbb{R}^{d}$ ein Maß, welches d-dimensionales Lebesgue-Maß heißt.
+
+\paragraph{Definition 1.4}
+
+Ist P eine Maß auf $(\Omega, F)$ mit $P (\Omega) = 1$, so heißt P ein Wahrscheinlichkeitsmaß und das Tripel $(\Omega, F, P)$ Wahrscheinlichkeitsraum. In diesem Fall heißen die Elemente der $\sigma$-Algebra Ereignisse. \\
+
+Interpretation: Es sei $(\Omega, F, P)$ ein Wahrscheinlichkeitsraum. Dann ist $P (A)$ die Wahrscheinlichkeit, dass das Ergebnis des Experiments im Ereignis $A \epsilon F$ liegt.
+
+\paragraph{1.5}
+
+Es seien $\Omega , Z$ zwei Mengen. Es sei F eine $\sigma$-Algebra über $\Omega$ und z eine $\sigma$-Algebra über Z. Eine Abbildung $X: \Omega \rightarrow Z$ heißt Zufallsvariable, wenn $X^{-1}(B)= {w \epsilon \Omega: X(w) \epsilon B} \epsilon F \forall B \epsilon z$ gilt. In diesem Fall nennen wir Z den Zustandsraum von X und sagen, dass X von $(\Omega, F)$ nach $(Z,z)$ abbildet, kurz $X:(\Omega, F) \rightarrow (Z,z)$.
+
+\paragraph{Beispiel}
+
+\underline{Münzwurf}
+
+\begin{itemize}
+\item $p \epsilon [0,1], q = 1-p$
+\item $\Omega={Zahl, Kopf}={0,1}$
+\item $F = P (\Omega) = { \varnothing, {0}, {1}, \Omega}$
+\item $P (\varnothing) = 0, P ({0}) = q, P({1}) = 0, P(\Omega) = 1$
+\end{itemize}
+
+Für $p= \dfrac{1}{2}$ ist das Modell ein fairer Münzwurf.
+
+\underline{zweifacher Münzwurf}
+
+\begin{itemize}
+\item $p \epsilon [0,1], q = 1-p$
+\item $P({(0,0)}) = q^{2}, P({(0,1)})=P({(1,0)})= pq, P({(1,1)})= p^{2}$
+\item für $A \subseteq \Omega : P(A) = \sum _{w \epsilon A} P({w})$
+\end{itemize}
+
+Die Größe $X: \Omega \rightarrow {0,1,2}$ mit $X(w)=$ "Anzahl der 1er in w" ist eine Zufallsvariable mit Werten in $Z = {0,1,2} (z = P (Z))$
+
+%--------------------------------------------------
+
+\paragraph{Notizen 16.04.18}
 
 $P ({x}) = x \epsilon \Omega $
 
@@ -107,7 +204,7 @@ ODER: $X(w_{1},w_{2})=w_{1}+w_{2}$
 
 z.B. $P(X^{-1}({1})) = P({(0,1),(1,0)})= 2pq$
 
-%----------------------------------------------------
+%---------------------------------------------------------------------------
 
 \subsection{Statistik}
 
