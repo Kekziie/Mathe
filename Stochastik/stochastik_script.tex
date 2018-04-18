@@ -208,4 +208,35 @@ z.B. $P(X^{-1}({1})) = P({(0,1),(1,0)})= 2pq$
 
 \subsection{Statistik}
 
+\paragraph{Definition 1.6}
+
+Ein statistisches Modell wird durch eine Menge $\Omega$ mit $\sigma$-Algebra F, sowie einer Familie von Wahrscheinlichkeitsmaßen Q auf $( \Omega, F)$ beschrieben. In der parametrischen Statistik wird die Familie Q durch einen Index (Parameter) $\theta$ einer Indexmenge (Parametermenge) $\Theta$ beschrieben: $Q = {P_{\theta} : \theta \epsilon \Theta}$.
+
+\paragraph{Definition 1.7}
+
+Eine Stichprobe ist eine Zufallsvariable X (oder ein zufälliger Vektor $(X_{1}, ..., X_{n})$ oder eine zufällige Folge $X_{1}, X_{2}, ...$) von $( \Omega, F)$ in den Stichprobenraum $(Z,z)$. Ein Element x (oder ein Vektor $(x_{1}, ..., x_{n})$ oder eine Folge $x_{1}, x_{2}, ...$) aus dem Stichprobenraum Z heißt Realisation oder Beobachtung. Ist die Stichprobe ein Vektor, so nennen wir dessen Länge den Stichprobenumfang.
+
+\paragraph{Beispiel}
+
+\underline{Münzwurf}
+
+\begin{itemize}
+\item $\Theta = [0,1]$
+\item $\Omega = {0,1}, F = P(\Omega)$
+\item für $\theta \epsilon \Theta: P_{\theta} (\varnothing) = 0, P_{\theta}({0}) = 1- \theta, P_{\theta}({1}) = \theta, P_{\theta}(\Omega) = 1$
+\item Stichprobe: $X: \Omega \rightarrow {0,1}$ mit $X(w) = w$
+\end{itemize}
+
+\paragraph{Definition 1.8}
+
+Es sei $Q = {P_{\theta} : \theta \epsilon \Theta}$ ein statistisches Modell und es sei X (oder $X_{1}, ..., X_{n}$) eine Stichprobe im Stichprobenraum $(Z,z)$. Ein statistisches Verfahren ist eine Abbildung vom Stichprobenraum Z (oder von $Z^{n}$) ist eine Antwortmenge A.
+
+\begin{itemize}
+\item Ist die Antwortmenge A gleich $\Theta$ (oder $g(\Theta)$, wobei g eine Funktion ist), so sagen wir, das Verfahren ist ein Schätzer
+\item Ist die Antwortmenge A gleich ${ja, nein}$ (oder ${1,0}$), so sprechen wir von einem Hypothesentest
+\item Ist die Antwortmenge eine Familie von Intervallen, dass sprechen wir von einem Verfahren zur Berechnung von Konfidenzintervallen
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
 \end{document}
