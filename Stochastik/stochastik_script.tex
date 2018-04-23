@@ -61,9 +61,7 @@
 \newpage
 
 %----------------------------------------------------------------------------------------
-
 \section{Vorwort}
-
 \subsection{Stochastik}
 
 Beschreibungen von zufälligen Vorgängen, z.B.:
@@ -98,17 +96,13 @@ Justierung und Überprüfung eines Modells anhand von Daten
 \end{itemize}
 
 \subsection{Abkürzungen}
-
 W' : Wahrscheinlichkeiten
 
 %----------------------------------------------------------------------------------------
-
+\newpage
 \section{Grundbegriffe}
-
 \subsection{Wahrscheinlichkeitstheorie}
-
 \paragraph{Definition 1.1}
-
 Es sei $ \Omega \neq \varnothing$ eine Menge, der Grundraum. Eine Familie $F \subseteq P( \Omega)$ von Teilmengen heißt $ \sigma$-Algebra, wenn gilt:
 
 \begin{itemize}
@@ -127,27 +121,21 @@ Eine Abbildung $\mu : F \rightarrow [0, \infty ]$ heißt Maß auf $(\Omega, F)$,
 Das Tripel $( \Omega, F, \mu)$ heißt Maßraum.
 
 \paragraph{Bemerkung 1.2}
-
 Ist $\Omega$ eine beliebige Menge, dann ist $\zeta : P(\Omega) \rightarrow [0, \infty ]$ mit $\zeta (A) = |A| $ ein Maß, welches Zählmaß heißt.
 
 \paragraph{Bemerkung 1.3}
-
 Die Begriffe Länge, Fläche, Volumen sind Maße auf geeigneten $\sigma$-Algebra von $ \mathbb{R}, \mathbb{R}^{2} , \mathbb{R}^{3}$ definiert. Diese $\sigma$-Algebra enthalten alle Intervalle achsenparallele Rechtecke, achsenparallele Quader. Allgemein ist das d-dimensionale Volumen von geeigneten Teilmengen des $\mathbb{R}^{d}$ ein Maß, welches d-dimensionales Lebesgue-Maß heißt.
 
 \paragraph{Definition 1.4}
-
 Ist P eine Maß auf $(\Omega, F)$ mit $P (\Omega) = 1$, so heißt P ein Wahrscheinlichkeitsmaß und das Tripel $(\Omega, F, P)$ Wahrscheinlichkeitsraum. In diesem Fall heißen die Elemente der $\sigma$-Algebra Ereignisse. \\
 
 Interpretation: Es sei $(\Omega, F, P)$ ein Wahrscheinlichkeitsraum. Dann ist $P (A)$ die Wahrscheinlichkeit, dass das Ergebnis des Experiments im Ereignis $A \epsilon F$ liegt.
 
-\paragraph{1.5}
-
+\paragraph{Definition 1.5}
 Es seien $\Omega , Z$ zwei Mengen. Es sei F eine $\sigma$-Algebra über $\Omega$ und z eine $\sigma$-Algebra über Z. Eine Abbildung $X: \Omega \rightarrow Z$ heißt Zufallsvariable, wenn $X^{-1}(B)= {w \epsilon \Omega: X(w) \epsilon B} \epsilon F \forall B \epsilon z$ gilt. In diesem Fall nennen wir Z den Zustandsraum von X und sagen, dass X von $(\Omega, F)$ nach $(Z,z)$ abbildet, kurz $X:(\Omega, F) \rightarrow (Z,z)$.
 
 \paragraph{Beispiel}
-
 \underline{Münzwurf}
-
 \begin{itemize}
 \item $p \epsilon [0,1], q = 1-p$
 \item $\Omega={Zahl, Kopf}={0,1}$
@@ -158,7 +146,6 @@ Es seien $\Omega , Z$ zwei Mengen. Es sei F eine $\sigma$-Algebra über $\Omega$
 Für $p= \dfrac{1}{2}$ ist das Modell ein fairer Münzwurf.
 
 \underline{zweifacher Münzwurf}
-
 \begin{itemize}
 \item $p \epsilon [0,1], q = 1-p$
 \item $P({(0,0)}) = q^{2}, P({(0,1)})=P({(1,0)})= pq, P({(1,1)})= p^{2}$
@@ -168,9 +155,7 @@ Für $p= \dfrac{1}{2}$ ist das Modell ein fairer Münzwurf.
 Die Größe $X: \Omega \rightarrow {0,1,2}$ mit $X(w)=$ "Anzahl der 1er in w" ist eine Zufallsvariable mit Werten in $Z = {0,1,2} (z = P (Z))$
 
 %--------------------------------------------------
-
 \paragraph{Notizen 16.04.18}
-
 $P ({x}) = x \epsilon \Omega $
 
 W' , dass das Ergebnis des zufälligen Experiments gleich x ist, sofern ${x} \epsilon F$, also ein Ereignis ist.
@@ -205,21 +190,15 @@ ODER: $X(w_{1},w_{2})=w_{1}+w_{2}$
 z.B. $P(X^{-1}({1})) = P({(0,1),(1,0)})= 2pq$
 
 %---------------------------------------------------------------------------
-
 \subsection{Statistik}
-
 \paragraph{Definition 1.6}
-
 Ein statistisches Modell wird durch eine Menge $\Omega$ mit $\sigma$-Algebra F, sowie einer Familie von Wahrscheinlichkeitsmaßen Q auf $( \Omega, F)$ beschrieben. In der parametrischen Statistik wird die Familie Q durch einen Index (Parameter) $\theta$ einer Indexmenge (Parametermenge) $\Theta$ beschrieben: $Q = {P_{\theta} : \theta \epsilon \Theta}$.
 
 \paragraph{Definition 1.7}
-
 Eine Stichprobe ist eine Zufallsvariable X (oder ein zufälliger Vektor $(X_{1}, ..., X_{n})$ oder eine zufällige Folge $X_{1}, X_{2}, ...$) von $( \Omega, F)$ in den Stichprobenraum $(Z,z)$. Ein Element x (oder ein Vektor $(x_{1}, ..., x_{n})$ oder eine Folge $x_{1}, x_{2}, ...$) aus dem Stichprobenraum Z heißt Realisation oder Beobachtung. Ist die Stichprobe ein Vektor, so nennen wir dessen Länge den Stichprobenumfang.
 
 \paragraph{Beispiel}
-
 \underline{Münzwurf}
-
 \begin{itemize}
 \item $\Theta = [0,1]$
 \item $\Omega = {0,1}, F = P(\Omega)$
@@ -228,7 +207,6 @@ Eine Stichprobe ist eine Zufallsvariable X (oder ein zufälliger Vektor $(X_{1},
 \end{itemize}
 
 \paragraph{Definition 1.8}
-
 Es sei $Q = {P_{\theta} : \theta \epsilon \Theta}$ ein statistisches Modell und es sei X (oder $X_{1}, ..., X_{n}$) eine Stichprobe im Stichprobenraum $(Z,z)$. Ein statistisches Verfahren ist eine Abbildung vom Stichprobenraum Z (oder von $Z^{n}$) ist eine Antwortmenge A.
 
 \begin{itemize}
