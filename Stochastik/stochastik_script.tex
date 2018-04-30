@@ -215,6 +215,82 @@ Es sei $Q = {P_{\theta} : \theta \epsilon \Theta}$ ein statistisches Modell und 
 \item Ist die Antwortmenge eine Familie von Intervallen, dass sprechen wir von einem Verfahren zur Berechnung von Konfidenzintervallen
 \end{itemize}
 
+%--------------------------------------------------
+\paragraph{Notizen 23.04.18}
+W' raum \\
+$\Omega$ = Grundmenge (Menge der Ergebnisse) \\
+F = $\sigma$-Algebra (Menge der Ereignisse) \\
+
+$F \subseteq P( \Omega)$ \\
+\begin{enumerate}
+\item $\varnothing \in F$
+\item $A \in F \Rightarrow \Omega \backslash A \in F$
+\item $A_{1},A_{2} \in F \Rightarrow A_{1} \cup A_{2} \cup ... \in F$
+\end{enumerate}
+
+P = W' maß \\
+$P:F \rightarrow [0,1]$ \\
+$(P( \varnothing)=0, P(\Omega)=1)$ \\
+$A_{1},A_{2},... \in F$ ; paarweise disjunkt\\
+$\Rightarrow P(A_{1} \cup A_{2} \cup ...) = P(A_{1})+P(A_{2})+...$ \\
+
+Statistisches Modell
+\begin{itemize}
+\item $\Omega$ = Grundmenge
+\item F= $\sigma$-Algebra
+\item Q=Familie von W'maßen \\
+Freiheit für Anpassungen oder Vermutungen 
+\end{itemize}
+
+\underline{Mittelwert}
+unverfälscht $x=(1,...,1)$ \\
+$\overline{x}=\dfrac{1}{100} \underbrace{1+...+1}_{100x}=1$ \\
+
+Tippfehler: $x= (\underbrace{1,...,1}_{99x}, 1 000 000)$ \\
+$\overline{x}=\dfrac{1}{100} (1+...+1+1 000 000) =10 000,99$ \\
+
+\underline{Median}
+unverfälscht: $median(x)=\dfrac{1}{2}(x_{(50)}+x_{(51)}) = \dfrac{1}{2} (1+1)=1$ \\
+Tippfehler: $median(x)=\dfrac{1}{2}(x_{(50)}+x_{(51)}) = \dfrac{1}{2} (1+1)=1$ \\
+
+$A_{1},A_{2},...,A_{n} \in F$ \\
+$\Rightarrow A_{1},A_{2},...,A_{n}, \varnothing, \varnothing, ... \in F $ \\
+$\Rightarrow A_{1},A_{2},...,A_{n}, \Omega , \Omega ... \in F $ \\
+ 
+$P: F \rightarrow [0,1]$  \\
+$= P( \Omega) = {A: A \subseteq \Omega}$ \\
+für $| \Omega| = n$ ist $|P( \Omega)| = 2^{n}$ \\
+für $A \in F$, d.h. $A \subseteq \Omega$, gilt $A = \cup_{w \in A} {w}$ \\
+$A= \cup_{w \in A} {\underbrace{w}_{\in F= P( \Omega)}}$ \\
+ist Vereinigung von paarweisen disjunkten Elementen von F \\
+
+$P(A)= \sum_{w \in A} P({w}) = \sum_{w \in A}f(w)$ \\
+$\Omega = \mathbb{R}$ \\
+$1=P(\mathbb{R})= \int_{\mathbb{R}} f(x) dx ; f(x) \geq 0 \forall x \in \mathbb{R}$ \\
+
+Beispiel: Fairer Würfel
+
+$\Omega={1,...,6}$ \\
+$F=P( \Omega)$ \\
+Zähldichte: $f: \Omega \rightarrow [0,1]$ \\
+$f(w) = P({w}) = \dfrac{1}{6}; w \in \Omega$ \\
+damit: $P(A)= \sum_{w \in A} f(w) = \sum_{w \in A} \dfrac{1}{6}=\dfrac{|A|}{6}$
+
+Beispiel:
+
+$\Omega= \mathbb{R}$ \\
+$F=B(\mathbb{R})$ \\
+$f: \mathbb{R} \rightarrow [0, \infty)$ mit $f(x) = \textbf{1}_{[0,1]}(x)$ \\
+$\textbf{1}_{[0,1](x)= \begin{array}{11} 1, x \in [0,1] \\
+                                                               0, sonst .\end{array}$ \\
+f erfüllt:
+\begin{itemize}
+\item $f(x) \geq 0 \forall x \in \mathbb{R}$
+\item $\int_{\mathbb{R}} f(x) dx$
+\end{itemize}                                                               
+
+%---------------------------------------------------------------------------
+
 %----------------------------------------------------------------------------------------
 
 \end{document}
