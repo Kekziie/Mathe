@@ -290,6 +290,62 @@ f erfüllt:
 \end{itemize}                                                               
 
 %---------------------------------------------------------------------------
+\paragraph{Notizen 30.04.18}
+Modellbildung \\
+W'raum $(\Omega, F, P)$ \\
+
+\begin{itemize}
+\item[diskret]
+$\Omega$ endlich oder abzählbar \\
+$F=P( \Omega)$ Potenzmenge \\
+$P:P( \Omega) \rightarrow [0,1]$ \\
+$f: \Omega \rightarrow [0,1]$ Zähldichte \\
+damit: $P(A)= \sum_{w \in A} f(w) ; A \subseteq \Omega$
+\item[abs.]
+$\Omega = \mathbb{R}$ \\
+$F=B(\mathbb{R}) \rightarrow [0,1]$ \\
+$f: \mathbb{R} \rightarrow [0, \infty)$ Dichte (stückweise stetig) \\
+damit: $P(A) = \int_{A} f(x) dx ; A \in B(\mathbb{R})$ \\
+hier $P({x})=0 \forall x \in \mathbb{R}$
+\end{itemize}
+
+falsch: $P(A)= P(\cup_{x \in A} {x})$ \\
+$= \sum_{x \in A} P({x})=0$ \\
+
+Fehler: $A=\cup_{x \in A}$ ist im Allgemeinen \textbf{nicht} abzählbar.
+
+W'funktion F von abs. stetigen W'raum \\
+$F(b)=P((- \infty,b])$ \\
+$F(a)=P((- \infty,a])$ \\
+für $a,b \in \mathbb{R}$ mit $a \leq b$ \\
+$F(b)-F(a)=P((- \infty,b]) =P((- \infty,a])$ \\
+$=P((- \infty,b] \backslash (- \infty,a])$ \\
+wegen $(- \infty,a] \subseteq (- \infty,b]$ \\
+$=P((a,b]) = P([a,b])$ \\
+wegen $P({a})=0$ \\
+
+Beispiel: Umforme Verteilung auf $[a,b)$ mit $a < b$ (abs. stetiger Fall) \\
+
+Forderung $P([s,t])$ proportional zur Länge $[s,t] \forall [s,t] \subseteq [a,b]$ \\
+damit: Dichte f auf $[a,b]$ konstant \\
+
+$f(x)=\begin{array}{11} \dfrac{1}{b-a} für x \in [a,b] \\
+                                     0 sonst. \end{array}$
+                                     
+f ist stückweise stetig
+
+Beispiel: Umf$([0,\dfrac{1}{2}])$ hat Dichte $f(x)= 2* \textbf{1}_{[0,\dfrac{1}{2}](x)}$ \\
+
+$\Omega={(R,1),(R,2),(B,1),(B,3),(G,2),(G,3)}$ \\
+zufälliges Ziehen: $F = P(\Omega)$ \\
+P ist diskret mit Zähldichte f mit $f(w)= \dfrac{1}{6}$, also $P=Umf( \Omega)$ \\
+
+Ereignisse:
+\emph{Aufdruck ist 1} = ${(R,1),(B,1)}$ \\
+\emph{Farbe ist R} = ${(R,1),(R,2)}$ \\
+Allgemein: \textit{Farbe ist R} = $P({(R,1),(R,2)})= \dfrac{1}{6} + \dfrac{1}{6}= \dfrac{2}{6} = \dfrac{1}{3}$ \\
+W' von \emph{Farbe ist R}, falls \emph{Aufdruck ist 1} bekommt ist, ist gleich $\dfrac{1}{2}$ \\
+denn: $\dfrac{1}{2} = \dfrac{\dfrac{1}{6}}{\dfrac{2}{6}} = \dfrac{P(\emph{Farbe ist R} \cap P(\emph{Aufdruck ist 1}))}{P(\emph{Aufdruck ist 1})}$   \\                               
 
 %----------------------------------------------------------------------------------------
 
