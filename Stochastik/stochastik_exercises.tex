@@ -190,8 +190,47 @@ Zeigen Sie, dass F strikt monoton wachsend ist. \\
 \subsubsection{Eigenschaft von F}
 Zeigen Sie, dass $F(x) \in (0,1) \forall x \in \mathbb{R}$ gilt. \\
 
-\subsubsection{Punkt P}
+\subsubsection{Wahrscheinlichkeit P}
 Bestimmen Sie $P([-1,1])$ mithilfe von F. \\
+
+%----------------------------------------------------------------------------------------
+\section{Blatt 04: Unabhängigkeit}
+%-------------------------------------------------
+\subsection{unabhängige, reellwertige Zufallsvariablen}
+Es seien $X_{1}, X_{2}$ unabhängige, reellwertige Zufallsvariable, welche beide gemäß $Unif([0,1])$ verteilt sind. \\
+
+\subsubsection{Wahrscheinlichkeit P}
+Bestimmen Sie $P([X_{1} \leq s, X_{2} \leq t])$ für $s,t \in [0,1]$. \\
+
+\subsubsection{Verteilungsfunktion F}
+Bestimmen Sie die Verteilungsfunktion $F_{M}$ der Zufallsvariable $M: \Omega \rightarrow \mathbb{R}$ mit $M(w)=max{X_{1}(w),X_{2}(w)}$. \\
+
+\subsubsection{Dichte}
+Bestimmen Sie die Dichte $f_{M}$ von M. \\
+
+%-------------------------------------------------
+\subsection{Zufallsexperiment: Würfel}
+Die Flächen von drei fairen Würfeln sind seltsam beschriftet:
+\begin{itemize}
+\item Die Flächen des ersten Würfels tragen dies Augenzahlen 3,3,3,3,3,6.
+\item Die Flächen des zweiten Würfels tragen die Augenzahlen 2,2,2,5,5,5.
+\item Die Flächen des dritten Würfels tragen die Augenzahlen 1,4,4,4,4,4.
+\end{itemize}
+
+Jeder der drei Würfel wird einmal geworfen. Dabei wird angenommen, dass alle $6^{3}$ Möglichkeiten für die oben liegenden Flächen gleich wahrscheinlich sind. \\
+
+\subsubsection{Experiment}
+Beschreiben Sie das zugehörige Experiment. \\
+
+\subsubsection{Zufallsvariablen}
+Beschreiben Sie die Zufallsvaribalen $X_{1},X_{2},X_{3}$, welche die Augenzahl der 1.,2. und des 3. Würfels angeben. \\
+
+\subsubsection{P bestimmen}
+Bestimmen Sie $P([X_{1} > X_{2}])$, $P([X_{2} > X_{3}])$, $P([X_{3} > X_{1}])$. \\
+
+%-------------------------------------------------
+\subsection{Unabhängigkeit}
+Es werde der Wahrscheinlichkeitsraum $(\mathbb{R},B(\mathbb{R})Unif([0,1]))$ betrachtet. Außerdem gelte $A_{1}=[0, \dfrac{1}{2}]$, $A_{2}=[\dfrac{1}{2},1]$ und $A_{3}=[0,\dfrac{1}{4}] \cup [\dfrac{3}{4},1]$. Überprüfen Sie, ob $A_{1},A_{2}$ oder $A_{2},A_{3}$ oder $A_{3},A_{1}$ oder $A_{1},A_{2},A_{3}$ unabhängig sind. \\
 
 %----------------------------------------------------------------------------------------
 \end{document}
