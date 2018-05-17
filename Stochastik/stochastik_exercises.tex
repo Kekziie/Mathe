@@ -233,4 +233,35 @@ Bestimmen Sie $P([X_{1} > X_{2}])$, $P([X_{2} > X_{3}])$, $P([X_{3} > X_{1}])$. 
 Es werde der Wahrscheinlichkeitsraum $(\mathbb{R},B(\mathbb{R})Unif([0,1]))$ betrachtet. Außerdem gelte $A_{1}=[0, \dfrac{1}{2}]$, $A_{2}=[\dfrac{1}{2},1]$ und $A_{3}=[0,\dfrac{1}{4}] \cup [\dfrac{3}{4},1]$. Überprüfen Sie, ob $A_{1},A_{2}$ oder $A_{2},A_{3}$ oder $A_{3},A_{1}$ oder $A_{1},A_{2},A_{3}$ unabhängig sind. \\
 
 %----------------------------------------------------------------------------------------
+\section{Blatt 05: Transformationssatz}
+%-------------------------------------------------
+\subsection{unabhängige, reellwertige Zufallsvariablen}
+Es seien X,Y und Z unabhängige Zufallsvariable mit Werten in ${0,1}$. Außerdem sei X Ber$(\dfrac{1}{2})$-verteilt, Y Ber$(\dfrac{1}{3})$-verteilt und Z Ber$(\dfrac{1}{6})$-verteilt. Die Zufallsvariable S werde durch $S(w)=X(w)+Y(w)+Z(w)$ definiert.
+
+\subsubsection{Wahrscheinlichkeitsraum und Zufallsvariablen}
+Beschreiben Sie einen Wahrscheinlichkeitsraum $(\Omega, F, P)$ und drei Zufallsvariablen $X,Y,Z: \Omega \rightarrow {0,1}$ so, dass obige Anforderungen erfüllt sind. \\
+
+\subsubsection{Zähldichte}
+Beschreiben Sie die Verteilung $P_{S}$ von S mithilfe der Zähldichte $f_{S}$. \\
+
+\subsubsection{Transformationssatz}
+Bestimmen Sie $E(S)$ und $Var(S)$ (mithilfe des Transformationssatzes). \\
+
+%-------------------------------------------------
+\subsection{Transformationssatz}
+Die reellwertige Zufallsvariable X habe eine absolut stetige Verteilung mit Dichte $f_{X}: \mathbb{R} \rightarrow [0, \infty), f_{X}(x)= \dfrac{1}{2}(x^{3}+1) \textbf{1} _{[-1,1]}$. Bestimmen Sie $E(X)$ und $Var(X)$. Überprüfen Sie Ihre Ergebnisse mithilfe von integrate(...). \\
+
+%-------------------------------------------------
+\subsection{stetige Verteilung}
+Es sei X eine reellwertige Zufallsvariable mit absolut stetiger Verteilung. Außerdem gebe es ein $c \in \mathbb{R}$ mit
+$$P([X \geq c+t]) = P([X \leq c-t])$$
+für alle $t \in \mathbb{R}$. 
+
+\subsubsection{Dichte}
+Welche Gleichung folgt daraus für die Dichte $f_{X}$? \\
+
+\subsubsection{E(X)}
+Rechnen Sie nach, dass $E(X)=c$ gilt, sofern $E(X)$ existiert. \\
+
+%----------------------------------------------------------------------------------------
 \end{document}
