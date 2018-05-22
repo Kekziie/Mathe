@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.23)  23 APR 2018 22:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.23)  22 MAY 2018 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -889,7 +889,7 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \f@ncyO@olf=\skip67
 \f@ncyO@orf=\skip68
 )
-No file stochastik_exercises.aux.
+(./stochastik_exercises.aux)
 \openout1 = `stochastik_exercises.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -906,6 +906,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 53.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 53.
+
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
@@ -1048,43 +1049,327 @@ Class scrartcl Warning: incompatible usage of \@ssect detected.
 (scrartcl)              This could result in several error messages on input li
 ne 59.
 
-No file stochastik_exercises.toc.
+(./stochastik_exercises.toc
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 2.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 2.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 2.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 2.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 2.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 2.
+)
 \tf@toc=\write3
 \openout3 = `stochastik_exercises.toc'.
 
-[2]
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 71.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 71.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 71.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 71.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 71.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 71.
- [3] (./stochastik_exercises.aux) ) 
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+[3]
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 117
+.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/ts1futs.fd
+File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 125.
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 166--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
+! You can't use `macro parameter character #' in math mode.
+l.173 $Z_{k}={a \in \Omega | #
+                              _{1}(a) = k}$ \\
+? 
+! You can't use `macro parameter character #' in math mode.
+<recently read> ##
+                  
+l.174 $#
+        _{1}(a)$=Anzahl Einsen in a \\
+? 
+
+! Package array Error:  Illegal pream-token (1): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 $$\textbf{1}_{[0,2]} (x) = \begin{array}{11}
+                                                   1  falls x \in [0,2], \\
+? 
+
+! Package array Error:  Illegal pream-token (1): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 $$\textbf{1}_{[0,2]} (x) = \begin{array}{11}
+                                                   1  falls x \in [0,2], \\
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.210 
+      
+? 
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+
+Overfull \hbox (48.46165pt too wide) in paragraph at lines 252--253
+\T1/futs/m/n/10.95 Bestimmen Sie die Verteilungs-funk-tion $\FML/futmi/m/it/10.
+95 F[]$ \T1/futs/m/n/10.95 der Zu-fallsvari-able $\FML/futmi/m/it/10.95 M \T1/f
+uts/m/n/10.95 : \FML/futm/m/it/10.95 
+ \FMS/futm/m/n/10.95 ! \U/futm/m/n/10.95 R$ \T1/futs/m/n/10.95 mit $\FML/futmi/
+m/it/10.95 M\T1/futs/m/n/10.95 (\FML/futmi/m/it/10.95 w\T1/futs/m/n/10.95 ) \FM
+S/futm/m/n/10.95 Å \FML/futmi/m/it/10.95 max[]$\T1/futs/m/n/10.95 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+
+ []
+
+
+Overfull \hbox (15.74551pt too wide) in paragraph at lines 266--267
+[]\T1/futs/m/n/10.95 Jeder der drei W¸r-fel wird ein-mal gewor-fen. Dabei wird 
+angenom-men, dass alle $6[]$ Mˆglichkeiten
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
+
+ []
+
+[10] (./stochastik_exercises.aux) ) 
 Here is how much of TeX's memory you used:
- 7590 strings out of 492995
- 114162 string characters out of 6132703
- 353899 words of memory out of 5000000
- 10989 multiletter control sequences out of 15000+600000
- 88060 words of font info for 95 fonts, out of 8000000 for 9000
+ 7640 strings out of 492995
+ 114967 string characters out of 6132703
+ 358899 words of memory out of 5000000
+ 11020 multiletter control sequences out of 15000+600000
+ 103057 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,10n,51p,8858b,222s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,10n,51p,8858b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/en
-c/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/four
-ier/fourier-ml.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/fouri
-er/fourier-mlit.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/four
-ier/fourier-ms.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/utopia
-/putr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/utopia/putri8
-a.pfb>
-Output written on stochastik_exercises.pdf (3 pages, 36195 bytes).
+c/dvips/base/8r.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-supe
+r/cm-super-t1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourie
+r/fourier-bb.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourier
+/fourier-mex.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourier
+/fourier-ml.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourier/
+fourier-mlit.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourier
+/fourier-ms.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/utopi
+a/putb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/utopia/putr8
+a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
+Output written on stochastik_exercises.pdf (10 pages, 88183 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

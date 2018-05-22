@@ -1,4 +1,39 @@
-\contentsline {section}{\numberline {1}Wahrscheinlichkeitstheorie}{3}
+\contentsline {section}{\numberline {1}Blatt 01:Wahrscheinlichkeitstheorie}{3}
 \contentsline {subsection}{\numberline {1.1}Beweis}{3}
 \contentsline {subsection}{\numberline {1.2}Beispiel}{3}
 \contentsline {subsection}{\numberline {1.3}zweifacher Wurf eines W\IeC {\"u}rfels}{3}
+\contentsline {section}{\numberline {2}Pr\IeC {\"a}senz\IeC {\"u}bung 01}{4}
+\contentsline {section}{\numberline {3}Blatt 02: Streudiagramm und Dichte}{5}
+\contentsline {subsection}{\numberline {3.1}Streudiagramm}{5}
+\contentsline {subsection}{\numberline {3.2}f\IeC {\"u}nffacher Wurf einer M\IeC {\"u}nze}{5}
+\contentsline {subsection}{\numberline {3.3}Dichte}{6}
+\contentsline {section}{\numberline {4}Blatt 03: Rechenregeln und Dichte}{7}
+\contentsline {subsection}{\numberline {4.1}Rechenregeln Wahrscheinlichkeiten}{7}
+\contentsline {subsection}{\numberline {4.2}Zufallsexperiment mit Kugeln}{7}
+\contentsline {subsubsection}{\numberline {4.2.1}mit Zur\IeC {\"u}cklegen}{7}
+\contentsline {subsubsection}{\numberline {4.2.2}ohne Zur\IeC {\"u}cklegen}{7}
+\contentsline {subsection}{\numberline {4.3}Dichte}{7}
+\contentsline {subsubsection}{\numberline {4.3.1}Konstante c}{7}
+\contentsline {subsubsection}{\numberline {4.3.2}Verteilungsfunktion F}{7}
+\contentsline {subsubsection}{\numberline {4.3.3}Monotonie}{8}
+\contentsline {subsubsection}{\numberline {4.3.4}Eigenschaft von F}{8}
+\contentsline {subsubsection}{\numberline {4.3.5}Wahrscheinlichkeit P}{8}
+\contentsline {section}{\numberline {5}Blatt 04: Unabh\IeC {\"a}ngigkeit}{8}
+\contentsline {subsection}{\numberline {5.1}unabh\IeC {\"a}ngige, reellwertige Zufallsvariablen}{8}
+\contentsline {subsubsection}{\numberline {5.1.1}Wahrscheinlichkeit P}{8}
+\contentsline {subsubsection}{\numberline {5.1.2}Verteilungsfunktion F}{8}
+\contentsline {subsubsection}{\numberline {5.1.3}Dichte}{8}
+\contentsline {subsection}{\numberline {5.2}Zufallsexperiment: W\IeC {\"u}rfel}{8}
+\contentsline {subsubsection}{\numberline {5.2.1}Experiment}{9}
+\contentsline {subsubsection}{\numberline {5.2.2}Zufallsvariablen}{9}
+\contentsline {subsubsection}{\numberline {5.2.3}P bestimmen}{9}
+\contentsline {subsection}{\numberline {5.3}Unabh\IeC {\"a}ngigkeit}{9}
+\contentsline {section}{\numberline {6}Blatt 05: Transformationssatz}{9}
+\contentsline {subsection}{\numberline {6.1}unabh\IeC {\"a}ngige, reellwertige Zufallsvariablen}{9}
+\contentsline {subsubsection}{\numberline {6.1.1}Wahrscheinlichkeitsraum und Zufallsvariablen}{9}
+\contentsline {subsubsection}{\numberline {6.1.2}Z\IeC {\"a}hldichte}{10}
+\contentsline {subsubsection}{\numberline {6.1.3}Transformationssatz}{10}
+\contentsline {subsection}{\numberline {6.2}Transformationssatz}{10}
+\contentsline {subsection}{\numberline {6.3}stetige Verteilung}{10}
+\contentsline {subsubsection}{\numberline {6.3.1}Dichte}{10}
+\contentsline {subsubsection}{\numberline {6.3.2}E(X)}{10}
