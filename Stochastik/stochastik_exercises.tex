@@ -163,6 +163,20 @@ $r(x,y)= \dfrac{6,5}{\sqrt{2,5 * 17}} \approx 0,997$
 \subsection{fünffacher Wurf einer Münze}
 Beschreiben Sie den fünffachen Wurf einer fairen Münze: Grundraum $\Omega$, $\sigma$-Algebra F und Wahrscheinlichkeitsmaß P. Ist $(\Omega, F, P)$ diskret oder absolut stetig? Für $k=0,...,5$ sei $Z_{k}$ das Ereignis, dass genau k-mal Zahl geworfen wird. Welche Ergebnisse enthält $Z_{k}$? Bestimmen Sie die Wahrscheinlichkeit von $Z_{k}$. \\
 
+0 Kopf, 1 Zahl \\
+$\Omega = {0,1}^{5}$ \\
+$F=P( \Omega)$ \\
+$P(A)= \dfrac{|A|}{32}$ \\
+
+$(\Omega, F, P)$ diskret \\
+
+$Z_{k}={a \in \Omega | #_{1}(a) = k}$ \\
+$#_{1}(a)$=Anzahl Einsen in a \\
+$P(Z_{k})= \dfrac{1}{32} * \begin{pmatrix}
+5 \\
+4 \\
+\end{pmatrix} $
+
 %-------------------------------------------------
 \subsection{Dichte}
 Der absolut stetige Wahrscheinlichkeitsraum $(\mathbb{R}, B(\mathbb{R}),P)$ habe die Dichte $f: \mathbb{R} \rightarrow [0, \infty)$ mit $f(x) = \dfrac{1}{4} (x+1) \textbf{1} _{[0,2]}(x)$ die Indikatorfunktion des Intervalls $[0,2]$ ist:
